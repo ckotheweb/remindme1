@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= Email.find_by_id(@remind.email_id).email %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @remind.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @remind.body %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @remind.schedule %>
+</p>
+
+<%= link_to 'Edit', edit_remind_path(@remind) %> |
+<%= link_to 'Back', reminds_path %>

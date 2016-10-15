@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RemindMe</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <nav id="panel">
+    <div id="panel_left">
+      <!--Top Left-hand side menu -->
+      <%= link_to "Home", root_path %>
+    </div>
+    <div id="panel_right"> 
+        <!-- Profile validation and links appearance logic -->
+        <% if user_signed_in? %> <!-- To make a decision of what options to provide when user loged-in or not-->
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> <!--Destroy session -->
+            <div id="name">
+                <%= link_to current_user.email, user_path(current_user) %> <!-- Displays user's email address on the right top corner of the screen and links to its show/edit page --> 
+            </div>
+            
+            <%if Profile.find_by_user_id(current_user.id) != nil %> <!-- Logic which displays Reservations and Profile options only in case user has a profile -->
+                <%= link_to "My Profile", profile_path(Profile.find_by_user_id(current_user.id)) %>
+                <%= link_to "New Reminder", new_remind_path(Profile.find_by_user_id(current_user.id)) %>
+                <%= link_to "My Reminders", reminds_path(Profile.find_by_user_id(current_user.id)) %>
+            <% else %> <!-- If profile is not created, provide only options to create a profile -->
+                <%= link_to "Create Profile", new_profile_path %>
+            <% end %>
+            
+            <%# if current_user.admin? %> <!-- Provides additional functionality if user is Admin -->
+                <%#= link_to "Manage users", users_path %>
+                <%#= link_to "Manage reservations", reservations_listreservations_path %>
+            <%# end %>
+                
+        <%else%> <!-- If user not signed-in below options will be displayed -->
+           <%= link_to "Sign In", new_user_session_path %> 
+           <%= link_to "Register", new_user_registration_path %>
+        <%end%>
+
+    </div>
+</nav>
+<p class="alert"><%= alert %></p>
+
+<%= yield %>
+
+<div id="signature">Prj ROR</div> <!-- Signature which proves the project was made by me - Aleksandr Kuriackovskij ;) -->
+</body>
+</html>
