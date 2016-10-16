@@ -9,10 +9,6 @@ class RemindsController < ApplicationController
   @reminds = Remind.where(:email => email_id)
   end
 
-  def getemail
-    emails = Mail.all
-  end
-
   # GET /reminds/1
   # GET /reminds/1.json
   def show
@@ -28,17 +24,6 @@ class RemindsController < ApplicationController
   # GET /reminds/1/edit
   def edit
   end
-  
-  def send_email(details)
-    recipient = Email.find_by_id(details.email_id).email
-    title = details.title
-    Mail.deliver do
-      to recipient
-      from ENV['USER_NAME']
-      subject 'Reminder has been logged: '+title
-      body 'Thank you for using Reminder Service!'
-    end
-  end
 
   # POST /reminds
   # POST /reminds.json
@@ -46,11 +31,9 @@ class RemindsController < ApplicationController
       @remind = Remind.new(remind_params)
 
     respond_to do |format|
-      if @remind.save && user_signed_in?
+      if @remind.save
         format.html { redirect_to @remind, notice: 'Remind was successfully created.' }
         format.json { render :show, status: :created, location: @remind }
-      elsif
-        Remind.send_email(@remind)
       else
         format.html { render :new }
         format.json { render json: @remind.errors, status: :unprocessable_entity }

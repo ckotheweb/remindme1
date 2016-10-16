@@ -24,7 +24,6 @@
                 <%= link_to "My Profile", profile_path(Profile.find_by_user_id(current_user.id)) %>
                 <%= link_to "New Reminder", new_remind_path(Profile.find_by_user_id(current_user.id)) %>
                 <%= link_to "My Reminders", reminds_path(Profile.find_by_user_id(current_user.id)) %>
-                <%= link_to "Emails", emails_path %>
             <% else %> <!-- If profile is not created, provide only options to create a profile -->
                 <%= link_to "Create Profile", new_profile_path %>
             <% end %>
