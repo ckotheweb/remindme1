@@ -1,10 +1,23 @@
+require 'mail'
+require 'openssl'
+
 class EmailsController < ApplicationController
-  before_action :set_email, only: [:show, :edit, :update, :destroy]
+
+before_action :set_email, only: [:show, :edit, :update, :destroy]
+Mail.defaults do
+  retriever_method :pop3, :address    => "pop.gmail.com",
+                          :port       => 995,
+                          :user_name  => ENV['USER_NAME'],
+                          :password   => ENV['PASSWORD'],
+                          :enable_ssl => true
+end
+
+puts Mail.first 
 
   # GET /emails
   # GET /emails.json
   def index
-    @emails = Email.all
+    @emails = Mail.last
   end
 
   # GET /emails/1

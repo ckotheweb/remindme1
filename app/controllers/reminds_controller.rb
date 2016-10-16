@@ -1,18 +1,5 @@
-require 'mail'
-
 class RemindsController < ApplicationController
-  
-options = { :address              => "smtp.gmail.com",
-            :port                 => 587,
-            :user_name            => ENV['USER_NAME'],
-            :password             => ENV['PASSWORD'],
-            :authentication       => 'plain',
-            :enable_starttls_auto => true  }
-            
-Mail.defaults do
-  delivery_method :smtp, options
-end
-  
+
   before_action :set_remind, only: [:show, :edit, :update, :destroy]
 
   # GET /reminds
@@ -20,6 +7,10 @@ end
   def index
   email_id = Email.find_by_profile_id(current_user.id).id
   @reminds = Remind.where(:email => email_id)
+  end
+
+  def getemail
+    emails = Mail.all
   end
 
   # GET /reminds/1
@@ -37,25 +28,29 @@ end
   # GET /reminds/1/edit
   def edit
   end
+  
+  def send_email(details)
+    recipient = Email.find_by_id(details.email_id).email
+    title = details.title
+    Mail.deliver do
+      to recipient
+      from ENV['USER_NAME']
+      subject 'Reminder has been logged: '+title
+      body 'Thank you for using Reminder Service!'
+    end
+  end
 
   # POST /reminds
   # POST /reminds.json
   def create
-    profile = current_user.id
-    @remind = Remind.new(remind_params)
-    recipient = Email.find_by_profile_id(profile).email
-    title = @remind.title
+      @remind = Remind.new(remind_params)
 
     respond_to do |format|
-      if @remind.save
-        Mail.deliver do
-        to recipient
-        from 'alexnciproject@gmail.com'
-        subject 'Reminder has been logged: '+title
-        body 'Thank you for using Reminder Service!'
-      end
+      if @remind.save && user_signed_in?
         format.html { redirect_to @remind, notice: 'Remind was successfully created.' }
         format.json { render :show, status: :created, location: @remind }
+      elsif
+        Remind.send_email(@remind)
       else
         format.html { render :new }
         format.json { render json: @remind.errors, status: :unprocessable_entity }
