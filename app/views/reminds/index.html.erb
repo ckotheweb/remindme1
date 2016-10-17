@@ -13,11 +13,11 @@
   </thead>
 
   <tbody>
-    <% @reminds.each do |remind| %>
+    <% @reminds.where(:sent => nil).each do |remind| %>
       <tr>
         <td><%= Email.find_by_id(remind.email_id).email %></td>
         <td><%= remind.title %></td>
-        <td><%= remind.schedule %></td>
+        <td><%= remind.schedule.strftime("%Y-%m-%d %H:%M:00") %></td>
         <td><%= link_to 'Show', remind %></td>
         <td><%= link_to 'Edit', edit_remind_path(remind) %></td>
         <td><%= link_to 'Destroy', remind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
