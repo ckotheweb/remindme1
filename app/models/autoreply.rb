@@ -21,7 +21,7 @@ end
       subject 'Reminder has been logged: '+title
       html_part do
         content_type 'text/html; charset=UTF-8'
-        body File.read("#{Rails.root}/app/assets/reminder_templates/confirm.html")
+        body File.read("#{Rails.root}/app/assets/reminder_templates/confirm.html.erb").gsub("details_schedule", details.schedule.strftime("%Y-%m-%d %H:%M:00"))
       end
     end
   end
@@ -83,19 +83,24 @@ end
   end
   
   def self.send_reminder(remind)
-    recipient = Email.find_by_id(remind.email_id).email
-    title = remind.title
-    Mail.deliver do
-      from ENV['USER_NAME']
-      to recipient
-      subject title
-      html_part do
-        content_type 'text/html; charset=UTF-8'
-        body remind.body
+    if Email.exists?(id: remind.email_id)
+      recipient = Email.find_by_id(remind.email_id).email
+      title = remind.title
+      Mail.deliver do
+        from ENV['USER_NAME']
+        to recipient
+        subject title
+        html_part do
+          content_type 'text/html; charset=UTF-8'
+          body remind.body
+        end
       end
+      remind.sent = true
+      remind.save
+    else
+      bad_reminder = Remind.find_by_email_id(remind.email_id).id
+      Remind.destroy(bad_reminder)
     end
-    remind.sent = true
-    remind.save
   end
   
 end

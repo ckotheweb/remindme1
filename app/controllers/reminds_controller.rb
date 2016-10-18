@@ -5,7 +5,7 @@ class RemindsController < ApplicationController
   # GET /reminds
   # GET /reminds.json
   def index
-  email_id = Email.find_by_profile_id(current_user.id).id
+  email_id = Email.find_by_email(current_user.email).id
   @reminds = Remind.where(:email => email_id)
   end
 
@@ -16,9 +16,8 @@ class RemindsController < ApplicationController
 
   # GET /reminds/new
   def new
-    @profile = current_user.id #getting profile ID
     @remind = Remind.new
-    @remind.email_id = @profile #link reservation to profile ID
+    @remind.email_id = Email.find_by_email(current_user.email).id #link reservation to profile ID
   end
 
   # GET /reminds/1/edit

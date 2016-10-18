@@ -34,6 +34,7 @@ def self.check_reminder
     Autoreply.send_reminder(remind)
   end
 end
+
 private
 
   def send_confirmation

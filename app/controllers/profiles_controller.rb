@@ -26,14 +26,11 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
-    @eaddress = current_user.email
 
     respond_to do |format|
       if @profile.save
-      @email = Email.new({:email => @eaddress, :profile => @profile})
-      @email.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
-        format.json { render :show, status: :created, location: @profile }
+          format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+          format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
