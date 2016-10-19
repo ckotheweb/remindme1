@@ -5,8 +5,13 @@ class RemindsController < ApplicationController
   # GET /reminds
   # GET /reminds.json
   def index
-  email_id = Email.find_by_email(current_user.email).id
-  @reminds = Remind.where(:email => email_id)
+    email_id = Email.find_by_email(current_user.email).id
+    @reminds = Remind.where(:email => email_id)
+  end
+
+  def completed
+    email_id = Email.find_by_email(current_user.email).id
+    @reminds = Remind.where(:email => email_id)
   end
 
   # GET /reminds/1

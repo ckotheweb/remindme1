@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :emails
   resources :profiles
   resources :emails
-    resources :reminds
+  resources :reminds
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   match '/users/:id', to: 'users#show', via: 'get' #allows to view your own account
   
   get '/checkprofile' => 'profiles#checkprofile' #route to checkprofile method
+  get '/completed' => 'reminds#completed'
 end

@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Scheduled Reminders</h1>
+<h1>Completed Reminders</h1>
 
 <table>
   <thead>
     <tr>
       <th>Email</th>
       <th>Title</th>
-      <th>Schedule</th>
+      <th>Was sent to you on</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @reminds.where(:sent => nil).each do |remind| %>
+    <% @reminds.where(:sent => true).each do |remind| %>
       <tr>
         <td><%= Email.find_by_id(remind.email_id).email %></td>
         <td><%= remind.title %></td>
@@ -25,7 +25,7 @@
     <% end %>
   </tbody>
 </table>
- <%= link_to 'Completed reminders', completed_path %>
+<%= link_to "Scheduled reminders", reminds_path %>
 <br>
 
 <h3><%= link_to 'Create new', new_remind_path %></h3>

@@ -7,12 +7,13 @@ after_create :send_confirmation
 def self.get_email(message)
   begin    
     if message.subject.include? "#"
-      sched_arg = message.subject.partition('#').first.to_datetime
+      sched_non_converted = message.subject.partition('#').first.to_datetime
+      sched_arg = sched_non_converted.change(:offset => "+0100") #This one can be changed to reflect time zone. Also tz can be changed under /etc/timezone and under config/application.rb
       title_arg = message.subject.partition('#').last
       if Email.where(:email => message.from.first).blank?
         Email.create! email: message.from.first
         email_id = Email.find_by_email(message.from.first).id
-        Remind.create! title: message.subject, body: message.body.decoded, email_id: email_id
+        Remind.create! title: title_arg, body: message.html_part.body.decoded, email_id: email_id, schedule: sched_arg
       else
         email_id = Email.find_by_email(message.from.first).id
         Remind.create! title: title_arg, body: message.html_part.body.decoded, email_id: email_id, schedule: sched_arg
@@ -22,6 +23,8 @@ def self.get_email(message)
     end
   rescue ArgumentError
     Autoreply.send_date_missing(message)
+  rescue Encoding::UndefinedConversionError
+    Autoreply.bad_encoding(message)
   #rescue Exception
   #  Autoreply.bad_delivery(message)
   end

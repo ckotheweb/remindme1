@@ -5,7 +5,7 @@ require 'rufus-scheduler'
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.every '15s' do
+scheduler.every '30s' do
   Remind.check_reminder
 end
 
