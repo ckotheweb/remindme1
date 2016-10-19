@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   
   get '/checkprofile' => 'profiles#checkprofile' #route to checkprofile method
   get '/completed' => 'reminds#completed'
+  
 end

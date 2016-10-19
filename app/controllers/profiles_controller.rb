@@ -22,6 +22,19 @@ class ProfilesController < ApplicationController
   def edit
   end
 
+  ###########=checkprofile= method############
+  #Method which check if logged user has a profile
+  ################################################
+  def checkprofile
+    profile = Profile.find_by_user_id(current_user.id)
+    if profile.nil?
+      redirect_to "/profiles/new"
+    else
+      @profile = Profile.find_by_user_id(current_user.id)
+      redirect_to "/reminds"
+    end
+  end
+
   # POST /profiles
   # POST /profiles.json
   def create
