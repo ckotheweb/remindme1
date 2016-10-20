@@ -1,8 +1,13 @@
-require 'mail'
 class Remind < ApplicationRecord
 
 belongs_to :email
-after_create :send_confirmation
+validate :date_cannot_be_in_the_past, :on => :create                              #Validating that date cannot be past only on create. When updating record - it won't require
+after_create :send_confirmation                                                   #Invoke method send_confirmation after reminder is created.
+
+#Method checks if date and time are not less than current time.
+def date_cannot_be_in_the_past
+  errors.add(:schedule, "must be higher or equal to today") if !schedule.blank? && schedule < Time.now
+end
 
 def self.get_email(message)
   timezone = "+0100" #Set correct timezone for you region. Dublin Summer = +0100, Diblin Winter = +0000. Also tz shall be changed under /etc/timezone and under config/application.rb
@@ -66,12 +71,16 @@ def self.check_reminder
   sendnow = Remind.where("schedule <= ?", time).where(:sent => nil) #Find reminders where scheduled time is less then current time and which weren't sent before.
   sendnow.each do |remind|
     Autoreply.send_reminder(remind)
+#    no_email_reminder = Remind.where("schedule <= ?", time).where(!Email.exists?(id: remind.email_id))  #Sanity check
+#    reminder_to_delete = Remind.find_by_email_id(no_email_reminder.id).id
+#    Remind.destroy(reminder_to_delete)
   end
 end
 
 private
 #Reminders logging method which is called from get_email method
 def self.logreminder(message, title_arg, sched_arg)
+    begin
       if Email.where(:email => message.from.first).blank?
         Email.create! email: message.from.first
         email_id = Email.find_by_email(message.from.first).id
@@ -80,6 +89,9 @@ def self.logreminder(message, title_arg, sched_arg)
         email_id = Email.find_by_email(message.from.first).id
         Remind.create! title: title_arg, body: message.html_part.body.decoded, email_id: email_id, schedule: sched_arg
       end
+    rescue ActiveRecord::RecordInvalid
+      Autoreply.past_date(message)
+    end
 end
 
   def send_confirmation

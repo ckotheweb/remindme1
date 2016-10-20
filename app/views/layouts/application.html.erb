@@ -28,10 +28,10 @@
                 <%= link_to "Create Profile", new_profile_path %>
             <% end %>
             
-            <%# if current_user.admin? %> <!-- Provides additional functionality if user is Admin -->
-                <%#= link_to "Manage users", users_path %>
-                <%#= link_to "Manage reminders", reservations_listreservations_path %>
-            <%# end %>
+            <% if current_user.admin? %> <!-- Provides additional functionality if user is Admin -->
+                <%= link_to "Manage users", users_path %>
+                <%= link_to "Manage reminders", listallreminders_path %>
+            <% end %>
                 
         <%else%> <!-- If user not signed-in below options will be displayed -->
            <%= link_to "Sign In", new_user_session_path %> 

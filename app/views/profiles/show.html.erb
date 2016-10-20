@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @profile.lastname %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @profile.age %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @profile.user %>
-</p>
-
+<% if current_user.profile == @profile or current_user.admin? %>
+  <p>
+    <strong>Name:</strong>
+    <%= @profile.name %>
+  </p>
+  
+  <p>
+    <strong>Lastname:</strong>
+    <%= @profile.lastname %>
+  </p>
+  
+  <p>
+    <strong>Age:</strong>
+    <%= @profile.age %>
+  </p>
+  
+  <p>
+    <strong>User ID:</strong>
+    <%= @profile.user_id %>
+  </p>
+<% else %>
+  <h2>You are not authorized to view this profile.</h2>
+<% end %>
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<% if current_user.admin? %>
+  <%= link_to 'Profiles', profiles_path %>
+<% end %>

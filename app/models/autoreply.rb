@@ -21,7 +21,7 @@ end
       subject 'Reminder has been logged: '+title
       html_part do
         content_type 'text/html; charset=UTF-8'
-        body File.read("#{Rails.root}/app/assets/reminder_templates/confirm.html").gsub("details_schedule", details.schedule.strftime("%Y-%m-%d %H:%M:00"))
+        body File.read("#{Rails.root}/app/assets/reminder_templates/confirm.html").gsub("details_schedule", details.schedule.strftime("%Y-%m-%d %H:%M"))
       end
     end
   end
@@ -82,8 +82,23 @@ end
     end  
   end
   
+  def self.past_date(message)
+    recipient = message.from.first
+    title = message.subject
+    Mail.deliver do
+      from "RemindMail Service "+ENV['USER_NAME']
+      to recipient
+      subject 'Failed to create reminder : '+title
+      html_part do
+        content_type 'text/html; charset=UTF-8'
+        body File.read("#{Rails.root}/app/assets/reminder_templates/past_date.html")
+      end
+    end  
+  end
+  
+  #Reminder sender !!!
   def self.send_reminder(remind)
-    if Email.exists?(id: remind.email_id)
+    if Email.exists? id: remind.email_id                          #Checking if email exists in database. If not, delete that reminder.
       recipient = Email.find_by_id(remind.email_id).email
       title = remind.title
       Mail.deliver do
@@ -98,7 +113,7 @@ end
       remind.sent = true
       remind.save
     else
-      bad_reminder = Remind.find_by_email_id(remind.email_id).id
+      bad_reminder = Remind.find_by_email_id(remind.email_id).id  #Delete reminder with missing email
       Remind.destroy(bad_reminder)
     end
   end

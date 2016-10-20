@@ -1,6 +1,15 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
+  before_filter :isadmin, :only => [:destroy, :index]
+  
+  #Method which verifies if current user admin and allows to destroy profiles
+  def isadmin
+    unless current_user && current_user.admin?
+      render :forbidden
+    end
+  end
+  
   # GET /profiles
   # GET /profiles.json
   def index
@@ -22,7 +31,7 @@ class ProfilesController < ApplicationController
   def edit
   end
 
-  ###########=checkprofile= method############
+  ##############=checkprofile= method#############
   #Method which check if logged user has a profile
   ################################################
   def checkprofile

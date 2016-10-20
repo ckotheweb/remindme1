@@ -36,7 +36,7 @@ class RemindsController < ApplicationController
 
     respond_to do |format|
       if @remind.save
-        format.html { redirect_to @remind, notice: 'Remind was successfully created.' }
+        format.html { redirect_to @remind, notice: 'Reminder was successfully created.' }
         format.json { render :show, status: :created, location: @remind }
       else
         format.html { render :new }
@@ -50,7 +50,7 @@ class RemindsController < ApplicationController
   def update
     respond_to do |format|
       if @remind.update(remind_params)
-        format.html { redirect_to @remind, notice: 'Remind was successfully updated.' }
+        format.html { redirect_to @remind, notice: 'Reminder was successfully updated.' }
         format.json { render :show, status: :ok, location: @remind }
       else
         format.html { render :edit }
@@ -64,7 +64,7 @@ class RemindsController < ApplicationController
   def destroy
     @remind.destroy
     respond_to do |format|
-      format.html { redirect_to reminds_url, notice: 'Remind was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Reminder was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

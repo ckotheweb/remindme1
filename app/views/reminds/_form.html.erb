@@ -21,14 +21,14 @@
     <%= f.text_field :title, :size => "70" %>
   </div>
 
-  <div class="field main" data-no-turbolink>
+  <div class="field main">
     <%= f.label :body %>
     <%= f.text_area :body, :class => 'ckeditor' %>
   </div>
 
   <div class="field">
     <%= f.label :schedule %>
-    <%= f.datetime_select :schedule %>
+    <%= f.datetime_select :schedule, :start_year => Date.today.year %>
   </div>
 
   <div class="actions">

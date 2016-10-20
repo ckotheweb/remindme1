@@ -1,23 +1,20 @@
-require 'mail'
-require 'openssl'
-
 class EmailsController < ApplicationController
 
-before_action :set_email, only: [:show, :edit, :update, :destroy]
-Mail.defaults do
-  retriever_method :pop3, :address    => "pop.gmail.com",
-                          :port       => 995,
-                          :user_name  => ENV['USER_NAME'],
-                          :password   => ENV['PASSWORD'],
-                          :enable_ssl => true
-end
+before_action :set_email, only: [:update, :destroy]
+before_filter :authenticate_user!
+before_filter :isadmin, :only => [:index, :show, :new, :edit]
 
-puts Mail.first 
+ #Method which verifies if current user admin and allows to make any actions with e-mails
+  def isadmin
+    unless current_user && current_user.admin?
+      render :forbidden
+    end
+  end
 
   # GET /emails
   # GET /emails.json
   def index
-    @emails = Mail.last
+    @emails = Mail.all
   end
 
   # GET /emails/1

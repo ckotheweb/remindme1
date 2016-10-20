@@ -1,6 +1,13 @@
-<h1>Editing Profile</h1>
+<div class="main">
+<% if current_user.profile == @profile or current_user.admin? %> <!-- Checking if user is admin or profile owner. Only they are able to edit profile. -->
+    <h1>Editing Profile</h1>
+    
+    <%= render 'form', profile: @profile %>
+    
+    <%= link_to 'Show', @profile %> |
+    <%= link_to 'Back', profiles_path %>
 
-<%= render 'form', profile: @profile %>
-
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+<% else %>
+    <h2>You are not authorized to edit this profile.</h2>
+<% end %>
+</div>

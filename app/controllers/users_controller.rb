@@ -1,20 +1,19 @@
 ########################################################################################
-#== This controller is available only for admins. Required to list and edit profiles ==#
+#==                                 Users controller                                ==#
 ########################################################################################
 
 class UsersController < ApplicationController
     
     before_filter :authenticate_user! # Non-authenticated users can only see list of users
-    #before_filter :isadmin, :only => [:edit, :destroy, :index] # Admins can edit, destroy and see list of users
+    before_filter :isadmin, :only => [:edit, :destroy, :index] # Admins can edit, destroy and see list of users
+    before_action :set_user, only: [:show, :edit, :update, :destroy] #Actions which are allowed to perform against user
     
     #Logic which checks if user is admin and allows to perform certain actions
-    #def isadmin
-    #    unless current_user && current_user.admin?
-    #    render :forbidden
-    #    end
-    #end
-    
-    #before_action :set_user, only: [:show, :edit, :update, :destroy] #Actions which are allowed to perform against user
+    def isadmin
+        unless current_user && current_user.admin?
+        render :forbidden
+        end
+    end
     
     #Show selected user
     def show

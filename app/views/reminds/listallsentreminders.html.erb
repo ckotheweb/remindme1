@@ -1,0 +1,35 @@
+<html>
+  <div class="main">
+  <div id="header_text">
+    <h2>List of all Sent Reminders</h2><br>
+    <h3 style="color:red"><%= flash[:notice] %></h3>
+    <%= form_tag(listallsentreminders_path, :method => "get") do %>
+      <%= text_field_tag :search, nil, :placeholder =>"E-mail address" %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div><br>
+<%= link_to 'List all Reminders', listallreminders_path %>
+<table>
+  <thead>
+      <th>Email address</th>
+      <th>Subject</th>
+      <th>Was sent on</th>
+      <th>Created on</th>
+
+    </tr>
+  </thead>
+
+    <tbody>
+    <% @reminders.where(:sent => true).each do |reminder| %>
+      <tr>
+        <td><%= Email.find_by_id(reminder.email_id).email %></td>
+        <td><%= reminder.title %></td>
+        <td><%= reminder.schedule.strftime("%Y-%m-%d %H:%M:00") %></td> 
+        <td><%= reminder.created_at.strftime("%Y-%m-%d %H:%M:00") %></td>
+        <td><%= link_to 'Delete Reminder', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+   </tbody>
+</table>
+</div>
+</html>

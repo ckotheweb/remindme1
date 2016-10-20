@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   
   get '/checkprofile' => 'profiles#checkprofile' #route to checkprofile method
   get '/completed' => 'reminds#completed'
+  get '/listallreminders' => 'search#list_all_reminders'
+  get '/listallsentreminders' => 'search#list_all_sent_reminders'
   
 end
