@@ -1,3 +1,5 @@
+require 'my_logger'
+
 class Remind < ApplicationRecord
 
 belongs_to :email
@@ -56,12 +58,24 @@ def self.get_email(message)
     else
       Autoreply.send_no_hash(message)
     end
-  #rescue ArgumentError
-   # Autoreply.send_date_missing(message)
+  ##################################################
+  ############# Rescuing exceptions ################
+  ##################################################
+  rescue ArgumentError
+    Autoreply.send_date_missing(message)
   rescue Encoding::UndefinedConversionError
     Autoreply.bad_encoding(message)
-  #rescue Exception
-  #  Autoreply.bad_delivery(message)
+  rescue Exception => error_message
+    Autoreply.bad_delivery(message)
+    ################################################
+    ## Logger to log unknown unhandled exceptions ##
+    ################################################
+    catch_log = MyLogger.instance
+    catch_log.logException("NEW ERROR LOGGED! - " + Time.now.to_s)
+    catch_log.logException("######################################################")
+    catch_log.logException(error_message)
+    catch_log.logException("######################################################")
+    
   end
 end
 

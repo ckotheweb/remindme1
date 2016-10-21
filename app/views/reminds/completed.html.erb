@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<div class="main">
 <h1>Completed Reminders</h1>
-
+<%= form_tag destroy_multiple_reminds_path, method: :delete do %> <!-- Form for selecting multiple reminders to delete. -->
 <table>
   <thead>
     <tr>
+      <th>Select to delete</th>
       <th>Email</th>
       <th>Title</th>
       <th>Was sent to you on</th>
@@ -13,19 +14,22 @@
   </thead>
 
   <tbody>
-    <% @reminds.where(:sent => true).each do |remind| %>
+    <% @reminds.where(:sent => true).each do |remind| %> <!-- List only already sent reminders (where "sent" = true) -->
       <tr>
+        <td><%= check_box_tag "reminds[]", remind.id %></td>
         <td><%= Email.find_by_id(remind.email_id).email %></td>
-        <td><%= remind.title %></td>
+        <td><%= truncate(remind.title, :length => 50) %></td> <!-- Allow only 50 simbols to be displayed in list view. -->
         <td><%= remind.schedule.strftime("%Y-%m-%d %H:%M:00") %></td>
         <td><%= link_to 'Show', remind %></td>
         <td><%= link_to 'Edit', edit_remind_path(remind) %></td>
-        <td><%= link_to 'Destroy', remind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<%= submit_tag "Delete selected", data: { confirm: 'Are you sure?' } %>
+<% end %>
 <%= link_to "Scheduled reminders", reminds_path %>
 <br>
 
 <h3><%= link_to 'Create new', new_remind_path %></h3>
+</div>

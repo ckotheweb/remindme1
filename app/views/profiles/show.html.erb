@@ -23,7 +23,7 @@
 <% else %>
   <h2>You are not authorized to view this profile.</h2>
 <% end %>
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Edit', edit_profile_path(@profile) %>
 <% if current_user.admin? %>
-  <%= link_to 'Profiles', profiles_path %>
+  | <%= link_to 'Profiles', profiles_path %>
 <% end %>

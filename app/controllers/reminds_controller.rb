@@ -7,6 +7,9 @@ class RemindsController < ApplicationController
   def index
     email_id = Email.find_by_email(current_user.email).id
     @reminds = Remind.where(:email => email_id)
+      if @reminds.blank?
+        flash[:notice] = "You don't have any reminders."
+      end
   end
 
   def completed
@@ -22,7 +25,7 @@ class RemindsController < ApplicationController
   # GET /reminds/new
   def new
     @remind = Remind.new
-    @remind.email_id = Email.find_by_email(current_user.email).id #link reservation to profile ID
+    @remind.email_id = Email.find_by_email(current_user.email).id #maps reminder to email ID
   end
 
   # GET /reminds/1/edit
@@ -59,15 +62,24 @@ class RemindsController < ApplicationController
     end
   end
 
-  # DELETE /reminds/1
-  # DELETE /reminds/1.json
-  def destroy
-    @remind.destroy
+#Method which delete selected reminders
+  def destroy_multiple
+    Remind.destroy(params[:reminds])
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Reminder was successfully destroyed.' }
+      format.html { redirect_to :back, notice:  'Reminder(s) was deleted.' }
       format.json { head :no_content }
     end
   end
+
+  # DELETE /reminds/1
+  # DELETE /reminds/1.json
+  #def destroy
+  #  @remind.destroy
+  #  respond_to do |format|
+  #    format.html { redirect_to :back, notice: 'Reminder was successfully destroyed.' }
+  #    format.json { head :no_content }
+  #  end
+  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -12,6 +12,11 @@ Mail.defaults do
   delivery_method :smtp, options
 end
   
+  ###########################################################
+  ## Below are the methods which sends e-mail to the user ###
+  ### based on the condition. Purpose of method is evident ##
+  ###                from theirs names.                   ###
+  ###########################################################
   def self.send_confirm(details)
     recipient = Email.find_by_id(details.email_id).email
     title = details.title
@@ -96,7 +101,9 @@ end
     end  
   end
   
-  #Reminder sender !!!
+  ##################################################
+  ### Method which sends e-mail reminder to user ###
+  ##################################################
   def self.send_reminder(remind)
     if Email.exists? id: remind.email_id                          #Checking if email exists in database. If not, delete that reminder.
       recipient = Email.find_by_id(remind.email_id).email

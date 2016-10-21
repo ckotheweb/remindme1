@@ -1,35 +1,38 @@
 <html>
   <div class="main">
   <div id="header_text">
-    <h2>List of all Reminders</h2><br>
+    <h2>List of all Scheduled Reminders</h2><br>
     <h3 style="color:red"><%= flash[:notice] %></h3>
     <%= form_tag(listallreminders_path, :method => "get") do %>
       <%= text_field_tag :search, nil, :placeholder =>"E-mail address" %>
       <%= submit_tag "Search" %>
     <% end %>
   </div><br>
-<%= link_to 'List all already sent Reminders', listallsentreminders_path %>
+<%= link_to 'List all already sent Reminders', listallsentreminders_path %> 
+<%= form_tag destroy_multiple_reminds_path, method: :delete do %> <!-- Form for selecting multiple reminders to delete. -->
 <table>
   <thead>
+      <th>Select to delete</th>
       <th>Email address</th>
       <th>Subject</th>
       <th>Scheduled for</th>
       <th>Created on</th>
-
     </tr>
   </thead>
 
     <tbody>
-    <% @reminders.each do |reminder| %>
+    <% @reminders.where(:sent => nil).each do |reminder| %> <!-- List only scheduled reminders (where "sent" = nil) -->
       <tr>
+        <td><%= check_box_tag "reminds[]", reminder.id %></td>
         <td><%= Email.find_by_id(reminder.email_id).email %></td>
-        <td><%= reminder.title %></td>
+        <td><%= truncate(reminder.title, :length => 50) %></td> <!-- Allow only 50 simbols to be displayed in list view. -->
         <td><%= reminder.schedule.strftime("%Y-%m-%d %H:%M:00") %></td> 
         <td><%= reminder.created_at.strftime("%Y-%m-%d %H:%M:00") %></td>
-        <td><%= link_to 'Delete Reminder', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
    </tbody>
 </table>
+<%= submit_tag "Delete selected", data: { confirm: 'Are you sure?' } %>
+<% end %>
 </div>
 </html>

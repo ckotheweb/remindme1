@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   resources :emails
   resources :profiles
   resources :emails
-  resources :reminds
+  resources :reminds do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
