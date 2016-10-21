@@ -2,13 +2,11 @@ class EmailsController < ApplicationController
 
 before_action :set_email, only: [:update, :destroy]
 before_filter :authenticate_user!
-before_filter :isadmin, :only => [:index, :show, :new, :edit]
+before_filter :dont_allow, :only => [:index, :show, :new, :edit]
 
- #Method which verifies if current user admin and allows to make any actions with e-mails
-  def isadmin
-    unless current_user && current_user.admin?
-      render :forbidden
-    end
+ #Method which prevents from any users actions related to "emails" CRUD
+  def dont_allow
+    render :forbidden
   end
 
   # GET /emails
