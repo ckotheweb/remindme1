@@ -23,4 +23,8 @@ Rails.application.routes.draw do
   get '/listallreminders' => 'search#list_all_reminders'
   get '/listallsentreminders' => 'search#list_all_sent_reminders'
   
+  ### Contact us form route ###
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+  
 end
