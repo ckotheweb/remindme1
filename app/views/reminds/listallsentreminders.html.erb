@@ -1,7 +1,7 @@
 <html>
   <div class="main">
   <div id="header_text">
-    <h2>List of all Sent Reminders</h2><br>
+    <h2>List of all Past Reminders</h2><br>
     <h3 style="color:red"><%= flash[:notice] %></h3>
     <%= form_tag(listallsentreminders_path, :method => "get") do %>
       <%= text_field_tag :search, nil, :placeholder =>"E-mail address" %>
