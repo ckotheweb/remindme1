@@ -1,6 +1,7 @@
 class RemindsController < ApplicationController
 
   before_action :set_remind, only: [:show, :edit, :update, :destroy]
+  before_filter :set_timezone
 
   # GET /reminds
   # GET /reminds.json
@@ -15,6 +16,11 @@ class RemindsController < ApplicationController
   def completed
     email_id = Email.find_by_email(current_user.email).id
     @reminds = Remind.where(:email => email_id)
+  end
+  
+  def set_timezone
+    tz = Profile.find_by_user_id(current_user.id).timezone
+    @timezone = Time.now.in_time_zone(tz).strftime('%z')
   end
 
   # GET /reminds/1
@@ -36,6 +42,10 @@ class RemindsController < ApplicationController
   # POST /reminds.json
   def create
       @remind = Remind.new(remind_params)
+      if user_signed_in?
+        user_time = @remind.schedule.to_datetime
+        @remind.schedule = user_time.change(:offset => @timezone)
+      end
 
     respond_to do |format|
       if @remind.save

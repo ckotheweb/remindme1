@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020142159) do
+ActiveRecord::Schema.define(version: 20161027194040) do
 
   create_table "emails", force: :cascade do |t|
     t.string   "email"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20161020142159) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "timezone"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

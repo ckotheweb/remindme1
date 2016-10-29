@@ -19,7 +19,9 @@
         <td><%= check_box_tag "reminds[]", remind.id %></td>
         <td><%= Email.find_by_id(remind.email_id).email %></td>
         <td><%= truncate(remind.title, :length => 50) %></td> <!-- Allow only 50 symbols to be displayed in list view. -->
-        <td><%= remind.schedule.strftime("%Y-%m-%d %H:%M:00") %></td>
+        <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
+          <td><%= remind.schedule.strftime("%Y-%m-%d %H:%M:00") %></td>
+        <% end %>
         <td><%= link_to 'Show', remind %></td>
         <td><%= link_to 'Edit', edit_remind_path(remind) %></td>
       </tr>

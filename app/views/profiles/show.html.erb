@@ -20,6 +20,11 @@
     <strong>User ID:</strong>
     <%= @profile.user_id %>
   </p>
+  
+  <p>
+    <strong>Location:</strong>
+    <%= @profile.timezone %>
+  </p>
 <% else %>
   <h2>You are not authorized to view this profile.</h2>
 <% end %>

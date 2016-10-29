@@ -3,7 +3,7 @@ require 'my_logger'
 class Remind < ApplicationRecord
 
 belongs_to :email
-validate :date_cannot_be_in_the_past, :on => :create                              #Validating that date cannot be past only on create. When updating record - it won't require
+validate :date_cannot_be_in_the_past                                             #Validating that date cannot be past only on create. When updating record - it won't require
 after_create :send_confirmation                                                   #Invoke method send_confirmation after reminder is created.
 
 #Method checks if date and time are not less than current time.
@@ -12,13 +12,23 @@ def date_cannot_be_in_the_past
 end
 
 def self.get_email(message)
-  timezone = "+0100" #Set correct timezone for you region. Dublin Summer = +0100, Diblin Winter = +0000. Also tz shall be changed under /etc/timezone and under config/application.rb
+  #If statement for getting user's timezone and setting appropriate time based on it
+  if (Email.exists? email: message.from.first) && (Profile.exists? id: Email.find_by_email(message.from.first).profile_id)
+    tz = Profile.find_by_id(Email.find_by_email(message.from.first).profile_id).timezone
+    timezone = Time.now.in_time_zone(tz).strftime('%z')
+  else
+    timezone = "+0100" #Set correct timezone for your region. Dublin Summer = +0100, Diblin Winter = +0000. Also tz shall be changed under /etc/timezone and under config/application.rb
+    tz = "UTC"
+  end
   #Declaring dates variables for logging date of reminder using word notation instead of digits.
-  today = Date.today.to_s+" "
-  tomorrow = (Date.today + 1.day).to_s+" "
-  nextweek = (Date.today + 1.week).to_s+" "
-  nextmonth = (Date.today + 1.month).to_s+" "
-  nextyear = (Date.today + 1.year).to_s+" "
+  Time.zone = tz
+  today = Time.now.in_time_zone(tz).to_date
+  #today = Date.today.to_s+" "
+  today_s = today.to_s+" "
+  tomorrow = (today + 1.day).to_s+" "
+  nextweek = (today + 1.week).to_s+" "
+  nextmonth = (today + 1.month).to_s+" "
+  nextyear = (today + 1.year).to_s+" "
   begin
     title_arg = message.subject.partition('#').last
     if message.subject.include? "#"                                               #Verifying hash delimiter is in the subject
@@ -32,11 +42,11 @@ def self.get_email(message)
       
       #getting reminder date from word notation, or, in final, from digital notation.
       if message.subject.partition('#').first.downcase.include? "today"
-        sched_non_converted = (today + time_sched).to_datetime
-        sched_arg = sched_non_converted.change(:offset => timezone)
+        sched_non_converted = (today_s + time_sched).to_datetime
+        sched_arg = sched_non_converted.change(:offset => -timezone)
       elsif message.subject.partition('#').first.downcase.include? "tomorrow"
         sched_non_converted = (tomorrow + time_sched).to_datetime
-        sched_arg = sched_non_converted.change(:offset => timezone)
+        sched_arg = sched_non_converted.change(:offset => -timezone)
       elsif message.subject.partition('#').first.downcase.include? "week"
         sched_non_converted = (nextweek + time_sched).to_datetime
         sched_arg = sched_non_converted.change(:offset => timezone)
@@ -47,7 +57,7 @@ def self.get_email(message)
         sched_non_converted = (nextyear + time_sched).to_datetime
         sched_arg = sched_non_converted.change(:offset => timezone)
       else
-        digitaldate = message.subject.partition('#').first.to_datetime.strftime("%Y-%m-%d").to_s
+        digitaldate = message.subject.partition('#').first.to_datetime.to_s
         sched_non_converted = (digitaldate+" "+time_sched).to_datetime
         sched_arg = sched_non_converted.change(:offset => timezone)
       end
@@ -61,12 +71,12 @@ def self.get_email(message)
   ##################################################
   ############# Rescuing exceptions ################
   ##################################################
-  rescue ArgumentError
-    Autoreply.send_date_missing(message)
+  #rescue ArgumentError
+  #  Autoreply.send_date_missing(message)
   rescue Encoding::UndefinedConversionError
     Autoreply.bad_encoding(message)
-  rescue Exception => error_message
-    Autoreply.bad_delivery(message)
+  #rescue Exception => error_message
+   # Autoreply.bad_delivery(message)
     ################################################
     ## Logger to log unknown unhandled exceptions ##
     ################################################

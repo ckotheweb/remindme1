@@ -18,15 +18,22 @@ end
   ###                from theirs names.                   ###
   ###########################################################
   def self.send_confirm(details)
+    Time.zone = 'UTC'
     recipient = Email.find_by_id(details.email_id).email
     title = details.title
+    if Profile.exists? id: Email.find_by_email(recipient).profile_id
+      tzone = Profile.find_by_id(Email.find_by_id(details.email_id).profile_id).timezone  #Getting name of the user's time zone
+    else
+      tzone = Time.zone
+    end
+    schedule = details.schedule.strftime("%Y-%m-%d %H:%M").to_s+", "+tzone+" time."                 #contactinating scheduled time with zone name
     Mail.deliver do
       from "RemindMail Service "+ENV['USER_NAME']
       to recipient
       subject 'Reminder has been logged: '+title
       html_part do
         content_type 'text/html; charset=UTF-8'
-        body File.read("#{Rails.root}/app/assets/reminder_templates/confirm.html").gsub("details_schedule", details.schedule.strftime("%Y-%m-%d %H:%M"))
+        body File.read("#{Rails.root}/app/assets/reminder_templates/confirm.html").gsub("details_schedule", schedule)
       end
     end
   end
@@ -118,7 +125,7 @@ end
         end
       end
       remind.sent = true
-      remind.save
+      remind.save(:validate => false)
     else
       bad_reminder = Remind.find_by_email_id(remind.email_id).id  #Delete reminder with missing email
       Remind.destroy(bad_reminder)

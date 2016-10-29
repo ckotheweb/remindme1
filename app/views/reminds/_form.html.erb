@@ -27,8 +27,10 @@
   </div>
 
   <div class="field">
+   <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
     <%= f.label :schedule %>
     <%= f.datetime_select :schedule, :start_year => Date.today.year %>
+  <% end %>
   </div>
 
   <div class="actions">

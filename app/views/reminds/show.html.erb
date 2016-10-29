@@ -18,7 +18,9 @@
     
     <p>
       <strong>Schedule:</strong>
-      <%= @remind.schedule %>
+      <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
+        <%= @remind.schedule %>
+      <% end %>
     </p>
   <% else %>
     <h2>You are not authorized to view this reminder.</h2>
