@@ -5096,3 +5096,317 @@ scheduler.rb: warning: no instances running. Starting...
 I, [2016-10-29T21:41:31.670314 #14163]  INFO -- : Mailman v0.7.0 started
 I, [2016-10-29T21:41:31.670557 #14163]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
 I, [2016-10-29T21:41:31.681372 #14163]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 2150 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T14:05:11.193163 #2150]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T14:05:11.193624 #2150]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T14:05:11.226353 #2150]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 2749 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T16:08:46.416507 #2749]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T16:08:46.416652 #2749]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T16:08:46.430593 #2749]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 2852 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T16:09:56.296515 #2852]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T16:09:56.296652 #2852]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T16:09:56.309261 #2852]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 3056 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T16:14:02.621189 #3056]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T16:14:02.621390 #3056]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T16:14:02.634464 #3056]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 3221 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T16:16:38.047301 #3221]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T16:16:38.047482 #3221]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T16:16:38.061220 #3221]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 3990 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T16:25:50.748960 #3990]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T16:25:50.749124 #3990]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T16:25:50.760314 #3990]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 4250 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-10-30T16:31:41.900521 #4250]  INFO -- : Mailman v0.7.0 started
+I, [2016-10-30T16:31:41.900713 #4250]  INFO -- : POP3 receiver enabled (alexnciproject@gmail.com@pop.gmail.com).
+I, [2016-10-30T16:31:41.914878 #4250]  INFO -- : Polling enabled. Checking every 20 seconds.
+I, [2016-10-30T16:34:58.447257 #3221]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 5:39#test 5.39'.
+/usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/dynamic_matchers.rb:21:in `method_missing': undefined method `current' for #<Class:0x00000004563138> (NoMethodError)
+Did you mean?  current_scope
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:122:in `send_confirmation'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:207:in `block in halting_and_conditional'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `block in call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `each'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:302:in `_create_record'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/timestamp.rb:68:in `_create_record'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:534:in `create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:298:in `block in create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:126:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:455:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:298:in `create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:152:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/validations.rb:50:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/dirty.rb:30:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:324:in `block in save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:211:in `transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:324:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/suppressor.rb:45:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:51:in `create!'
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:114:in `logreminder'
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:66:in `get_email'
+	from /home/ubuntu/project/remindme1/scripts/mailman_server.rb:21:in `block (2 levels) in <top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/router.rb:66:in `instance_exec'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/router.rb:66:in `route'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/message_processor.rb:23:in `block in process'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/middleware.rb:33:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/middleware.rb:38:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/message_processor.rb:22:in `process'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/receiver/pop3.rb:43:in `block in get_messages'
+	from /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/net/pop.rb:666:in `each'
+	from /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/net/pop.rb:666:in `each_mail'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/receiver/pop3.rb:42:in `get_messages'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:133:in `block in polling_loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:130:in `loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:130:in `polling_loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:83:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:11:in `run'
+	from /home/ubuntu/project/remindme1/scripts/mailman_server.rb:19:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:219:in `load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:219:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:158:in `block (2 levels) in start_all'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:157:in `fork'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:157:in `block in start_all'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:156:in `each'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:156:in `start_all'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:66:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+I, [2016-10-30T16:35:01.789074 #2150]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 5:39#test 5.39'.
+/usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/dynamic_matchers.rb:21:in `method_missing': undefined method `current' for #<Class:0x000000038c2d98> (NoMethodError)
+Did you mean?  current_scope
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:122:in `send_confirmation'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:207:in `block in halting_and_conditional'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `block in call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `each'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:302:in `_create_record'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/timestamp.rb:68:in `_create_record'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:534:in `create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:298:in `block in create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:126:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:455:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:298:in `create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:152:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/validations.rb:50:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/dirty.rb:30:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:324:in `block in save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:211:in `transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:324:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/suppressor.rb:45:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:51:in `create!'
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:114:in `logreminder'
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:66:in `get_email'
+	from /home/ubuntu/project/remindme1/scripts/mailman_server.rb:21:in `block (2 levels) in <top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/router.rb:66:in `instance_exec'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/router.rb:66:in `route'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/message_processor.rb:23:in `block in process'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/middleware.rb:33:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/middleware.rb:38:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/message_processor.rb:22:in `process'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/receiver/pop3.rb:43:in `block in get_messages'
+	from /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/net/pop.rb:666:in `each'
+	from /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/net/pop.rb:666:in `each_mail'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/receiver/pop3.rb:42:in `get_messages'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:133:in `block in polling_loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:130:in `loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:130:in `polling_loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:83:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:11:in `run'
+	from /home/ubuntu/project/remindme1/scripts/mailman_server.rb:19:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:219:in `load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:219:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+I, [2016-10-30T16:35:02.949299 #2852]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 5:39#test 5.39'.
+/usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/dynamic_matchers.rb:21:in `method_missing': undefined method `current' for #<Class:0x00000004414048> (NoMethodError)
+Did you mean?  current_scope
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:122:in `send_confirmation'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:382:in `block in make_lambda'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:207:in `block in halting_and_conditional'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `block in call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `each'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:456:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:302:in `_create_record'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/timestamp.rb:68:in `_create_record'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:534:in `create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:298:in `block in create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:126:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:455:in `call'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activesupport-5.0.0.1/lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/callbacks.rb:298:in `create_or_update'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:152:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/validations.rb:50:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/dirty.rb:30:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:324:in `block in save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:211:in `transaction'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/transactions.rb:324:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/suppressor.rb:45:in `save!'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/activerecord-5.0.0.1/lib/active_record/persistence.rb:51:in `create!'
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:114:in `logreminder'
+	from /home/ubuntu/project/remindme1/app/models/remind.rb:66:in `get_email'
+	from /home/ubuntu/project/remindme1/scripts/mailman_server.rb:21:in `block (2 levels) in <top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/router.rb:66:in `instance_exec'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/router.rb:66:in `route'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/message_processor.rb:23:in `block in process'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/middleware.rb:33:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/middleware.rb:38:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/message_processor.rb:22:in `process'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/receiver/pop3.rb:43:in `block in get_messages'
+	from /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/net/pop.rb:666:in `each'
+	from /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/net/pop.rb:666:in `each_mail'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/receiver/pop3.rb:42:in `get_messages'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:133:in `block in polling_loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:130:in `loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:130:in `polling_loop'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:83:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/mailman-0.7.0/lib/mailman/application.rb:11:in `run'
+	from /home/ubuntu/project/remindme1/scripts/mailman_server.rb:19:in `<top (required)>'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:219:in `load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:219:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:158:in `block (2 levels) in start_all'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:157:in `fork'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:157:in `block in start_all'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:156:in `each'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application_group.rb:156:in `start_all'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:66:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+I, [2016-10-30T16:35:11.825310 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 5:39#test 5.39'.
+I, [2016-10-30T16:42:03.672732 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 18.43#Riga 18.43'.
+I, [2016-10-30T16:43:27.069308 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 18:41#Past Riga'.
+I, [2016-10-30T16:47:56.944170 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 18:51#test 18.51 Riga'.
+I, [2016-10-30T16:48:39.564491 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Tomorrow 18.55#Tomrw 18.55'.
+I, [2016-10-30T16:49:42.597585 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Next week 14:50#test next week'.
+I, [2016-10-30T16:50:04.929677 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'In one month 17:15#Mnth 17:15'.
+I, [2016-10-30T16:51:28.456465 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'next year 14.00#nxt yr'.
+I, [2016-10-30T16:54:13.738571 #4250]  INFO -- : Got new message from 'a.kuriackovskij@gmail.com' with subject 'Today 19:10#Riga today'.

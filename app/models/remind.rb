@@ -15,11 +15,10 @@ def self.get_email(message)
   #If statement for getting user's timezone and setting appropriate time based on it
   if (Email.exists? email: message.from.first) && (Profile.exists? id: Email.find_by_email(message.from.first).profile_id)
     tz = Profile.find_by_id(Email.find_by_email(message.from.first).profile_id).timezone
-    timezone = Time.now.in_time_zone(tz).strftime('%z')
   else
-    timezone = "+0100" #Set correct timezone for your region. Dublin Summer = +0100, Diblin Winter = +0000. Also tz shall be changed under /etc/timezone and under config/application.rb
     tz = "UTC"
   end
+  timezone = Time.now.in_time_zone(tz).strftime('%z')
   #Declaring dates variables for logging date of reminder using word notation instead of digits.
   Time.zone = tz
   today = Time.now.in_time_zone(tz).to_date
@@ -49,17 +48,17 @@ def self.get_email(message)
         sched_arg = sched_non_converted.change(:offset => -timezone)
       elsif message.subject.partition('#').first.downcase.include? "week"
         sched_non_converted = (nextweek + time_sched).to_datetime
-        sched_arg = sched_non_converted.change(:offset => timezone)
+        sched_arg = sched_non_converted.change(:offset => -timezone)
       elsif message.subject.partition('#').first.downcase.include? "month"
         sched_non_converted = (nextmonth + time_sched).to_datetime
-        sched_arg = sched_non_converted.change(:offset => timezone)
+        sched_arg = sched_non_converted.change(:offset => -timezone)
       elsif message.subject.partition('#').first.downcase.include? "year"
         sched_non_converted = (nextyear + time_sched).to_datetime
-        sched_arg = sched_non_converted.change(:offset => timezone)
+        sched_arg = sched_non_converted.change(:offset => -timezone)
       else
         digitaldate = message.subject.partition('#').first.to_datetime.to_s
         sched_non_converted = (digitaldate+" "+time_sched).to_datetime
-        sched_arg = sched_non_converted.change(:offset => timezone)
+        sched_arg = sched_non_converted.change(:offset => -timezone)
       end
       
       #Calling logreminder method if no exceptions have been occured
@@ -119,7 +118,9 @@ def self.logreminder(message, title_arg, sched_arg)
 end
 
   def send_confirmation
-    Autoreply.send_confirm(self)
+    if User.current == nil          #Send confirmation only when user is not logged-on
+      Autoreply.send_confirm(self)
+    end
   end
   
 end

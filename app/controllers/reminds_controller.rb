@@ -21,6 +21,9 @@ class RemindsController < ApplicationController
   def set_timezone
     tz = Profile.find_by_user_id(current_user.id).timezone
     @timezone = Time.now.in_time_zone(tz).strftime('%z')
+    if current_user
+      User.current = current_user
+    end
   end
 
   # GET /reminds/1
