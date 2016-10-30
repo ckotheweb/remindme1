@@ -26,7 +26,7 @@ end
     else
       tzone = Time.zone
     end
-    schedule = details.schedule.strftime("%Y-%m-%d %H:%M").to_s+", "+tzone+" time."                 #contactinating scheduled time with zone name
+    schedule = details.schedule.strftime("%Y-%m-%d %H:%M").to_s+", "+tzone.to_s+" time."                 #contactinating scheduled time with zone name
     Mail.deliver do
       from "RemindMail Service "+ENV['USER_NAME']
       to recipient

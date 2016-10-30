@@ -8,9 +8,6 @@ class RemindsController < ApplicationController
   def index
     email_id = Email.find_by_email(current_user.email).id
     @reminds = Remind.where(:email => email_id)
-      if @reminds.blank?
-        flash[:notice] = "You don't have any reminders."
-      end
   end
 
   def completed

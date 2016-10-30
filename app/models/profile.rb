@@ -5,6 +5,10 @@ class Profile < ApplicationRecord
   
   after_create :check_email
   
+  validates :age, length: { maximum: 2 }, presence: true
+  validates :name, presence: true
+  validates :lastname, presence: true
+  
   private
   
   def check_email

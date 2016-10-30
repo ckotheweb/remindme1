@@ -30,11 +30,8 @@
     <%= f.label :location %>
     <%= f.time_zone_select :timezone, nil, default: Time.zone.name %>
   </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id, value: User.find_by_id(@profile.user_id).id  %>
-  </div>
+  
+    <%= f.text_field :user_id, value: User.find_by_id(@profile.user_id).id, :hidden => true  %>
 
   <div class="actions">
     <%= f.submit %>
