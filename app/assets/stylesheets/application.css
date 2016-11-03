@@ -27,6 +27,31 @@ body {
     line-height: 18px;
 }
 
+.pad {
+    background: linear-gradient(to bottom, rgba(57, 172, 53, 0.78) 87%, #EBD950 13%);
+    /*background-color: rgba(57, 172, 53, 0.78); */
+    font: 12pt 'Lucida Handwriting', Arial, Helvetica, Sans-Serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 10px;
+    text-shadow: .5px 1px #FAFA61;
+    margin-bottom: 10px;
+}
+
+#main {
+    display: table;
+    margin: 0 auto;
+}
+
+#container {
+    width: 97%; /*97%; */
+    margin: 0px auto;
+}
+
 #logo {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #410);
@@ -47,6 +72,7 @@ body {
 
 #panel {
     width: 100%;
+    margin: 0 auto;
     height: 50px;
     font-size: 15px;
     background-color: rgba(57, 172, 53, 0.78);
@@ -66,20 +92,26 @@ body {
     transform: scale(1.15);
 }
 
+#panel a:active{
+    -webkit-filter: saturate(8) drop-shadow(2px 10px 5px #A20);
+    filter: saturate(8) drop-shadow(2px 10px 5px #A20);
+    transform: scale(.6);
+}
+
 #panel_left a, #panel_right a{  /*mean links styling*/
     line-height: 45px; /* middle of nav bar*/
     color: white; 
-    padding: 0 10px 0 10px; /*top/right/bottom/left -->*/
+    padding: 0 5px 0 5px; /*top/right/bottom/left -->*/
 }
 
 #panel_left a{
-    margin: 0 0 0 1%;
-    float: left;
+    margin: 0 0 0 .5%;
     padding: 7px 0 0 15px;
+    float: left;
 }
 
 #panel_right a{
-    margin: 0 1% 0 0;
+    margin: 0 .5% 0 0;
     padding: 7px 0 0 0;
     float: right;
 }
@@ -87,12 +119,8 @@ body {
 #name {
     float: right;
     right: 11px;
+    position: absolute;
 }
-
-/*hide {
-    display: none;
-}
-*/
 
 a {
   color: #F5EDEB;
@@ -101,6 +129,121 @@ a {
 a:visited {
     color: #FCCC97;
 }
+
+@media screen and (max-width:1360px) {
+    #container {
+        width: 92%;
+    }
+    #panel {
+        padding-bottom: 25px;
+        margin: 10px auto;
+        width: 100%;
+    }
+    #panel_left {
+        float: left;
+    }
+    #panel_left a, #panel_right a{  /*mean links styling*/
+        line-height: 0px; /* middle of nav bar*/
+        color: white; 
+        padding: 0 0 0 0; /*top/right/bottom/left -->*/
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:887px) {
+    #logo {
+        text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 23px;
+        margin: 10px auto;
+    }
+    #panel_left a, #panel_right a{  /*mean links styling*/
+        line-height: 0px; /* middle of nav bar*/
+        color: white; 
+        padding: 0 0 0 0; /*top/right/bottom/left -->*/
+        margin: 0 auto;
+    }
+    #panel_left a{
+        clear: left;
+    }
+    #panel_right a{
+        float: right;
+    }
+}
+
+@media screen and (max-width:772px) {
+    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 65px;
+        margin: 10px auto;
+    }
+    #panel_left a, #panel_right a{  /*mean links styling*/
+        line-height: 0px; /* middle of nav bar*/
+        color: white; 
+        padding: 0 0 0 0; /*top/right/bottom/left -->*/
+        margin: 0 auto;
+    }
+    #panel_left a{
+        clear: left;
+    }
+    #panel_right a{
+        float: right;
+    }
+}
+
+@media screen and (max-width:582px) {
+    #container {
+        width: 582px;
+    }
+    #panel {
+        width: 90%;
+    }
+}
+/*    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 89px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:434px) {
+    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 120px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:359px) {
+    #container {
+        width: 359px;
+    }
+    #logo {
+    text-align: center;
+    }
+}
+
+
+*/
 
 /*a:hover {
     -webkit-filter: saturate(8) drop-shadow(5px 5px 5px #8D2);

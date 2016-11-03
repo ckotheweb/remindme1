@@ -5,8 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div id="container">
     <div id="logo">
         <%= image_tag("mail_forward.png", :alt => "logomail", width: 42, height: "auto") %>
         <%= link_to image_tag("logo4.png", :alt => "logo", width: 300, height: "auto", title: "Home"), root_path %>
@@ -16,6 +18,7 @@
       <!--Top Left-hand side menu -->
           <%= link_to image_tag("icons/home.png", :alt => "home", width: "80%", height: "auto", title: "Home"), root_path %>
           <%= link_to image_tag("icons/contactus.png", :alt => "contactus", width: "80%", height: "auto", title: "Contact us!"), contacts_path %>
+    </div>
     <div id="panel_right"> 
         <!-- Profile validation and links appearance logic -->
         <% if user_signed_in? %> <!-- To make a decision of what options to provide when user loged-in or not-->
@@ -45,9 +48,11 @@
     </div>
 <% end %>
 <p class="alert"><%= alert %></p>
-
-<%= yield %>
+<div id="main">
+    <%= yield %>
+</div>
 
 <div id="signature">Prj ROR</div> <!-- Signature which proves the project was made by me - Aleksandr Kuriackovskij ;) -->
+</div>
 </body>
 </html>
