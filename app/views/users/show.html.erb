@@ -1,45 +1,46 @@
-<div class="main">
-<% if current_user == @user or current_user.admin? %> <!-- Checking if user is admin or if user trying to access his own account -->
-  <h2><%= @user.email %> </h2>
-  <br/>
-  <%= form_for(@user) do |f| %>
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited user from being saved:</h2>
-  
-        <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+<div class="pad">
+  <% if current_user == @user or current_user.admin? %> <!-- Checking if user is admin or if user trying to access his own account -->
+    <h2><%= @user.email %> </h2>
+    <br/>
+    <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited user from being saved:</h2>
     
-    <div class="field">
-      <%= f.label :email %><br>
-      <%= f.text_field :email %>
-    </div>
-    <div class="field">
-      <%= f.label :password %><br>
-      <%= f.password_field :password, placeholder: 'Password' %>
-    </div>
-    <% if current_user.admin? %> <!--Only admins are allowed to provide admin permissions to other users !!! -->
+          <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
       <div class="field">
-        <%= f.label :admin %><br />
-        <%= f.check_box :admin %>
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, placeholder: 'Password' %>
+      </div>
+      <% if current_user.admin? %> <!--Only admins are allowed to provide admin permissions to other users !!! -->
+        <div class="field">
+          <%= f.label :admin %><br />
+          <%= f.check_box :admin %>
+        </div>
+      <% end %>
+      <div class="actions">
+        <%= f.submit 'Update details' %>
       </div>
     <% end %>
-    <div class="actions">
-      <%= f.submit 'Update details' %>
-    </div>
+  <% else %>
+    <h2>You are not authorized to view this account.</h2>
   <% end %>
+</div>
+<div class="optlink">
   <% if current_user.admin? %> <!-- Only admins are allowed to delete users -->
-    <br/><br/>
     <td><%= link_to 'DELETE USER', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <br/><br/>
+    <br><br>
     <%= link_to "Back to all users", users_path %>
   <% end %>
 </div>
-<% else %>
-  <h2>You are not authorized to view this account.</h2>
-<% end %>

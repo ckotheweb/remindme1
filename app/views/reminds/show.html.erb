@@ -1,25 +1,29 @@
 <p id="notice"><%= notice %></p>
-<div class="main">
+<div class="pad">
   <% if current_user.email == Email.find_by_id(@remind.email_id).email %>
     <p>
       <strong>Email:</strong>
-      <%= Email.find_by_id(@remind.email_id).email %>
+      <div class="mailmeta">
+        <%= Email.find_by_id(@remind.email_id).email %>
+      </div>
     </p>
     
     <p>
       <strong>Title:</strong>
-      <%= @remind.title %>
+      <div class="mailmeta">
+        <%= @remind.title %>
+      </div>
     </p>
     
     <p>
       <strong>Body:</strong>
-      <div class='textareaaa'>
+      <div class='mail'>
       <%= @remind.body.html_safe %>
       </div>
     </p>
     
     <p>
-      <strong>Schedule:</strong>
+      <strong>Scheduled for:</strong>
       <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
         <%= @remind.schedule %>
       <% end %>
@@ -27,5 +31,7 @@
   <% else %>
     <h2>You are not authorized to view this reminder.</h2>
   <% end %>
+</div>
+<div class="optlink">
   <%= link_to 'Back', reminds_path %>
 </div>
