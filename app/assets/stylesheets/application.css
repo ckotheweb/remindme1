@@ -62,18 +62,22 @@ h1, h2, h3 {
 }
 
 .mail {
-    background-color: rgba(243, 254, 230, 0.92);
+    background-color: white;
+    /*background-color: rgba(243, 254, 230, 0.92);*/
     display: block;
     color: black;
     border-radius: 3px;
+    margin: 0 10px 0 10px;
+    padding: 1px;
 }
 
 .mailmeta {
-    background-color: rgba(153, 223, 119, 0.91);
+    background-color: white;
+    /*background-color: rgba(153, 223, 119, 0.91);*/
     display: inline-block;
     color: black;
     border-radius: 8px;
-    padding: 3px;
+    padding: 3px 5px 3px 5px;
 }
 
 a {
