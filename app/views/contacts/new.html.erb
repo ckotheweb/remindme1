@@ -1,7 +1,6 @@
-<div align="center" class="main">
-  <h3>RemindMail team is always happy to receive messages from you.</h3>
-    
+<h3 style="color: white">RemindMail team is always happy to receive messages from you.</h3>
     <%= simple_form_for @contact do |f| %>
+    <div class="pad">
     <table>
         <tr>
           <td><%= f.input :name, :required => true, input_html: {class: 'contactform'} %> </td>
@@ -11,9 +10,11 @@
           <td colspan="2"> <%= f.input :message, :as => :text, :required => true, input_html: {class: 'contactform'} %> </td>
         </tr>
         </br>
-        <tr>
-          <td colspan="2"> <%= f.button :submit, 'Send message' %> </td>
-        </tr>
       </table>
+      </div>
+      <div class="optlink">
+      <tr>
+        <td colspan="2"> <%= f.button :submit, 'Send message' %> </td>
+      </tr>
       <% end %>
 </div>

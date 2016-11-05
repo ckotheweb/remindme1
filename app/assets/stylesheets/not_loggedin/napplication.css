@@ -27,19 +27,65 @@ body {
     line-height: 18px;
 }
 
+h1, h2, h3 {
+    font-family: 'Lucida Handwriting';
+}
+
 .pad {
     /*background: linear-gradient(to bottom, rgba(57, 172, 53, 0.78) 87%, #EBD950 13%); */
     background-color: rgba(57, 172, 53, 0.5);
-    font: 12pt 'Lucida Handwriting', Arial, Helvetica, Sans-Serif;
+    font: 12pt 'Verdana', Arial, Helvetica, Sans-Serif;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px; 
     padding: 10px;
     text-shadow: .5px 1px #FAFA61;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.optlink {
+    background-color: rgba(246, 197, 19, 0.9);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.mail {
+    background-color: rgba(243, 254, 230, 0.92);
+    display: block;
+    color: black;
+    border-radius: 3px;
+}
+
+.mailmeta {
+    background-color: rgba(153, 223, 119, 0.91);
+    display: inline-block;
+    color: black;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+a {
+    color: #C70A0A;
+    padding: 3px;
+}
+
+a:hover {
+    color: black;
+    background-color: rgba(225, 237, 59, 0.55);
+    border-radius: 8px;
+    padding: 3px;
 }
 
 #main {
@@ -52,10 +98,11 @@ body {
     margin: 0px auto;
 }
 
-#logo {
+#logo, #logo a:hover {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #410);
     text-align: right;
+    background-color: transparent;
 }
 
 #signature {
@@ -90,6 +137,7 @@ body {
     -webkit-filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
     filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
     transform: scale(1.15);
+    background-color: transparent;
 }
 
 #panel a:active{
@@ -116,10 +164,34 @@ body {
     float: right;
 }
 
-#name {
+#name a {
     float: right;
     right: 11px;
     position: absolute;
+    border-radius: 10px;
+    background-color: rgba(57, 172, 53, 0.78);
+    color: white;
+    font-weight: 900;
+    padding: 8px;
+}
+
+.contactform {
+    font: 12pt 'Gotham', Arial, Helvetica, Sans-Serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 3px;
+    resize: none;
+    margin: 0 auto;
+    padding: 2px;
+    width: 90%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
 }
 
 @media screen and (max-width:540px) {

@@ -391,3 +391,51 @@ scheduler.rb: warning: no instances running. Starting...
 I, [2016-11-04T20:49:20.049534 #3219]  INFO -- : Mailman v0.7.0 started
 I, [2016-11-04T20:49:20.061278 #3219]  INFO -- : POP3 receiver enabled (remindmailer@gmail.com@pop.gmail.com).
 I, [2016-11-04T20:49:20.076007 #3219]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 2606 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-11-05T00:11:48.548959 #2606]  INFO -- : Mailman v0.7.0 started
+I, [2016-11-05T00:11:48.549486 #2606]  INFO -- : POP3 receiver enabled (remindmailer@gmail.com@pop.gmail.com).
+I, [2016-11-05T00:11:48.572148 #2606]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 3178 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-11-05T01:05:47.387790 #3178]  INFO -- : Mailman v0.7.0 started
+I, [2016-11-05T01:05:47.388006 #3178]  INFO -- : POP3 receiver enabled (remindmailer@gmail.com@pop.gmail.com).
+I, [2016-11-05T01:05:47.396912 #3178]  INFO -- : Polling enabled. Checking every 20 seconds.
+mailman_server.rb: process with pid 3765 started.
+mailman_server.rb: warning: no instances running. Starting...
+/usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `reopen': Permission denied @ rb_io_reopen - /scripts/mailman_server.rb.output (Errno::EACCES)
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:157:in `redirect_io'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/daemonize.rb:112:in `daemonize'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:163:in `start_load'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/application.rb:298:in `start'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/controller.rb:69:in `run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:148:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons/cmdline.rb:92:in `catch_exceptions'
+	from /usr/local/rvm/gems/ruby-2.3.0/gems/daemons-1.2.4/lib/daemons.rb:147:in `run'
+	from /home/ubuntu/project/remindme1/scripts/daemons/mailman_ctl.svc:13:in `<main>'
+scheduler.rb: warning: no instances running. Starting...
+I, [2016-11-05T02:06:01.182028 #3765]  INFO -- : Mailman v0.7.0 started
+I, [2016-11-05T02:06:01.182230 #3765]  INFO -- : POP3 receiver enabled (remindmailer@gmail.com@pop.gmail.com).
+I, [2016-11-05T02:06:01.192424 #3765]  INFO -- : Polling enabled. Checking every 20 seconds.

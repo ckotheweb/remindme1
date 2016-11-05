@@ -1,12 +1,12 @@
-<div class="main">
+
 <% if current_user.email == Email.find_by_id(@remind.email_id).email %> <!-- Allow to edit and create only own reminders -->
     <h1>Editing Reminder</h1>
-    
-    <%= render 'form', remind: @remind %>
-    
-    <%= link_to 'Show', @remind %> |
-    <%= link_to 'Back', reminds_path %>
+    <div class="pad">
+        <%= render 'form', remind: @remind %>
+    </div>
+    <div class="optlink">
+        <%= link_to 'Back', reminds_path %>
+    </div>
 <% else %>
     <h2>You are not authorized to edit this reminder.</h2>    
 <% end %>
-</div>
