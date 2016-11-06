@@ -33,7 +33,7 @@ h1, h2, h3 {
 
 .pad {
     /*background: linear-gradient(to bottom, rgba(57, 172, 53, 0.78) 87%, #EBD950 13%); */
-    background-color: rgba(57, 172, 53, 0.5);
+    background-color: rgba(57, 172, 53, 0.6);
     font: 11pt 'Verdana', Arial, Helvetica, Sans-Serif;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
@@ -59,6 +59,15 @@ h1, h2, h3 {
     padding: 5px;
     text-align: center;
     font-weight: 800;
+}
+
+blockquote {
+    background-color: #4C9434; 
+    display: inline-block; 
+    margin: 0 0 0 25px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .mail {
@@ -125,10 +134,10 @@ a:hover {
     position: fixed;
     color: red;
     font-family: "Lucida Console";
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     bottom: 10px;
-    right: 2%;
+    right: 2px;
     margin: 0 auto;
     padding: 2px;
 }
@@ -208,6 +217,20 @@ a:hover {
     -moz-border-radius: 6px;
     border-radius: 3px;
     resize: none;
+    margin: 0 auto;
+    padding: 2px;
+    width: 90%;
+}
+
+#error_explanation {
+    color: #C7694A;
+    font: 12pt 'Gotham', Arial, Helvetica, Sans-Serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 3px;
     margin: 0 auto;
     padding: 2px;
     width: 90%;

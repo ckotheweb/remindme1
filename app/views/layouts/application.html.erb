@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>RemindMail</title>
+  <%= render 'application/favicon' %> <!-- Favicon to be displayed on website tab -->
     <% if user_signed_in? %>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <% else %>
@@ -52,11 +53,12 @@
     </div>
 <% end %>
 <p class="alert"><%= alert %></p>
+
 <div id="main">
     <%= yield %>
 </div>
 
-<div id="signature">Prj ROR</div> <!-- Signature which proves the project was made by me - Aleksandr Kuriackovskij ;) -->
+<div id="signature">Final NCIRL Project '16. A. Kuriackovskij</div> <!-- Signature which proves the project was made by me - Aleksandr Kuriackovskij ;) -->
 </div>
 </body>
 </html>
