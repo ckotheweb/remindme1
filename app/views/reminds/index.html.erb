@@ -2,12 +2,12 @@
 <div class="pad">
   <%= form_tag destroy_multiple_reminds_path, method: :delete do %> <!-- Form for selecting multiple reminders to delete. -->
     <% if @reminds.where(:sent => nil).empty? %>
-      <h4 style="color:red">You don't have any scheduled reminders.</h4>
+      <h4 style="color:yellow">You don't have any scheduled reminders.</h4>
     <% else %>
       <table>
         <h3 style="color:green"><%= flash[:notice] %></h3>
         <thead>
-          <tr>
+          <tr style="text-decoration: underline;">
             <th>Select to delete</th>
             <th>Email</th>
             <th>Title</th>
@@ -34,10 +34,9 @@
       </table>
     </div>
   <div class="optlink">
-    <%= submit_tag "Delete selected", data: { confirm: 'Are you sure want to delete selected?' } %> <br><br>
+    <%= submit_tag "Delete selected", data: { confirm: 'Are you sure want to delete selected?' } %> <br>
   <% end %>
 <% end %>
- <%= link_to 'Past reminders', completed_path %>
-<br>
-<h3><%= link_to 'Create new', new_remind_path %></h3>
+ <%= link_to 'List past reminders', completed_path %>
+<h2><%= link_to 'Create new', new_remind_path %></h2>
 </div>

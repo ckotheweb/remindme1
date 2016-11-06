@@ -34,7 +34,7 @@ h1, h2, h3 {
 .pad {
     /*background: linear-gradient(to bottom, rgba(57, 172, 53, 0.78) 87%, #EBD950 13%); */
     background-color: rgba(57, 172, 53, 0.5);
-    font: 12pt 'Verdana', Arial, Helvetica, Sans-Serif;
+    font: 11pt 'Verdana', Arial, Helvetica, Sans-Serif;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
@@ -42,7 +42,7 @@ h1, h2, h3 {
     -webkit-border-radius: 6px 6px 0px 0px;
     border-radius: 6px 6px 0px 0px; 
     padding: 10px;
-    text-shadow: .5px 1px #FAFA61;
+    text-shadow: .3px .4px #CCCCCC;
     margin-bottom: 0px;
     margin-top: 20px;
     text-align: center;
@@ -62,18 +62,26 @@ h1, h2, h3 {
 }
 
 .mail {
-    background-color: rgba(243, 254, 230, 0.92);
+    background-color: white;
+    /*background-color: rgba(243, 254, 230, 0.92);*/
     display: block;
     color: black;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
+    margin: 0 10px 0 10px;
+    padding: 1px;
 }
 
 .mailmeta {
-    background-color: rgba(153, 223, 119, 0.91);
+    background-color: white;
+    /*background-color: rgba(153, 223, 119, 0.91);*/
     display: inline-block;
     color: black;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
-    padding: 3px;
+    padding: 3px 5px 3px 5px;
 }
 
 a {
@@ -84,6 +92,8 @@ a {
 a:hover {
     color: black;
     background-color: rgba(225, 237, 59, 0.55);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     padding: 3px;
 }
@@ -98,10 +108,15 @@ a:hover {
     margin: 0px auto;
 }
 
-#logo, #logo a:hover {
+#logo {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #410);
     text-align: right;
+}
+
+#logo a:hover {
+    -webkit-filter: drop-shadow(1px 1px 1px #030);
+    filter: drop-shadow(1px 1px 1px #030);
     background-color: transparent;
 }
 
@@ -123,6 +138,8 @@ a:hover {
     height: 50px;
     font-size: 15px;
     background-color: rgba(57, 172, 53, 0.78);
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
     border-radius: 15px;
     margin-bottom: 40px;
 }
@@ -168,6 +185,8 @@ a:hover {
     float: right;
     right: 11px;
     position: absolute;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: rgba(57, 172, 53, 0.78);
     color: white;

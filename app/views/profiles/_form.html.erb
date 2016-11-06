@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="profile" style="text-align:left;">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <span style="padding-left:49px;"><%= f.text_field :name %></span>
   </div>
 
-  <div class="field">
+  <div class="profile" style="text-align:left;">
     <%= f.label :lastname %>
-    <%= f.text_field :lastname %>
+    <span style="padding-left:20px;"><%= f.text_field :lastname %></span>
   </div>
 
-  <div class="field">
+  <div class="profile" style="text-align:left;">
     <%= f.label :age %>
-    <%= f.number_field :age %>
+    <span style="padding-left:63px;"><%= f.number_field :age, min: 0, max: 99, :size => "5" %></span>
   </div>
   
-  <div class="field">
+  <div class="profile" style="text-align:left;">
     <%= f.label :location %>
-    <%= f.time_zone_select :timezone, nil, default: Time.zone.name %>
+    <span style="padding-left:29px;"><%= f.time_zone_select :timezone, nil, default: Time.zone.name %></span>
   </div>
   
     <%= f.text_field :user_id, value: User.find_by_id(@profile.user_id).id, :hidden => true  %>
