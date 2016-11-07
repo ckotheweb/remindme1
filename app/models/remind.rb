@@ -56,7 +56,7 @@ def self.get_email(message)
         sched_non_converted = (nextyear + time_sched).to_datetime
         sched_arg = sched_non_converted.change(:offset => -timezone)
       else
-        digitaldate = message.subject.partition('#').first.to_datetime.to_s
+        digitaldate = message.subject.partition('#').first.to_datetime.strftime("%Y-%m-%d")
         sched_non_converted = (digitaldate+" "+time_sched).to_datetime
         sched_arg = sched_non_converted.change(:offset => -timezone)
       end

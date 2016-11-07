@@ -1,22 +1,60 @@
 <h1 style="margin-bottom: 40px;">Welcome to RemindMail service!</h1>
 <div class="pad" style="text-align: left; width:80%; margin:0 auto;" >
-    <h3>What is RemindMail?</h3>
-    <p><strong>RemindMail</strong> is a reminder online service whose aim is to help you to be more efficient and productive by reducing amount of stored &quot;follow-up&quot; or unread&nbsp;e-mails in your personal mailbox. Or, simply when you need to make a reminder and forget about the case until you need it - RemindMail will send it back to you&nbsp;on time!</p>
-    <p>RemindMail is unique and universal - you can create reminders even without being registered, just send an e-mail to service and you will get it back at a scheduled time which you decide and set yourself.&nbsp;This service is not linked to any mailing providers or reminder&nbsp;services, you can use it with your private or work e-mail address. By registering you will get more - access to all scheduled and past reminders you created&nbsp;with possibility to read and edit them. Through website&nbsp;facilities you&nbsp;will also have a possibility to create reminders using comprehensive e-mail redactor.</p>
-</div>
-<div class="pad" style="text-align: left; width:80%; margin:0 auto; margin-top: 10px; font-size: 12px;" >
+    <h2 id="homeh2">What is RemindMail?</h2>
+    <p><strong>RemindMail</strong> is online reminder service whose aim is to help you to be more efficient and productive by reducing amount of stored &quot;follow-up&quot; or unread&nbsp;e-mails in your personal mailbox. Or, simply when you need to make a reminder and forget about the case until you need it - RemindMail will send it back to you&nbsp;on time! Registration is not compulsory but provides more features!</p>
+    <!--<p>RemindMail is unique and universal - you can create reminders even without being registered, just send an e-mail to service and you will get it back at a scheduled time which you decide and set yourself.&nbsp;This service is not linked to any mailing providers or reminder&nbsp;services, you can use it with your private or work e-mail address. By registering you will get more - access to all scheduled and past reminders you created&nbsp;with possibility to read and edit them. Through website&nbsp;facilities you&nbsp;will also have a possibility to create reminders using comprehensive e-mail redactor.</p>
+--></div>
+<div class="pad" style="text-align: left; width:80%; margin:0 auto; margin-top: 30px; font-size: 12px;" >
     <h2>How to use this service</h2>
-    <h4>How can I create a reminder?</h4>
+    <h4 style="text-decoration: underline;">How can I create a reminder?</h4>
     <p>A. There are two different ways to create a reminder:</p>
     <ul>
     	<li>Send an e-mail to <u><a href="mailto:remindmailer@gmail.com?Subject=23/02/2017 10.15#Congratulate%20Alex%20with%20BD" style="color:black; font-size: 14px;">remindmailer@gmail.com</a></u> and put in Subject date and time separated with a hash sign (&#39;#&#39;) from the actual e-mail title. You will receive it back on that date and time. <strong>Note:</strong> until you are registered, service will save your scheduled reminders time in GMT (+0) time zone. During the registration you can set your local time zone and receive all future reminders&nbsp;based on that time zone.</li>
     	<li>After registration, you can login to online service facilities and&nbsp;go to New Reminder section to create new reminder.</li>
     </ul>
-    <h4>How to set date and time in title?</h4>
+    <h4 style="text-decoration: underline;">How to set date and time in title?</h4>
     <p>A. RemindMail&nbsp;understands the following general Subject format with date and time in it:</p>
     <blockquote>
         <p style="padding: 0 3px 0 3px">2016-12-06 16.00#To present a project at 17.50</p>
     </blockquote>
     <p>So, above is the subject with Date and Time in front separated from the title with hash sign. That all what is required.&nbsp;Easy, huh?</p>
-    <h4>What date and time formats does RemindMail understand?</h4>
-    <p>A. RemindMail&nbsp;understands the following formats. Also, it doesn't matter if you specify date/time or time/date. It is up to you!</p>
+    <h4 style="text-decoration: underline;">What date and time formats does RemindMail understand?</h4>
+    <p>A. RemindMail&nbsp;understands the following formats. Also, it doesn't matter in what order you specify date/time or time/date. It is up to you!</p>
+    <div style="display:inline-block;">
+    <table id="howto">
+        <tr>
+            <th style="text-decoration: underline;">Supported Date formats</th>
+        </tr>
+        <tr>
+            <td>2016/12/06</td>
+        </tr>
+        <tr>
+            <td>2016-12-06</td>
+        </tr>
+        <tr>
+            <td>2016 December 06</td>
+        </tr>
+        <tr>
+            <td>2016 Dec 06</td>
+        </tr>
+        <tr>
+            <td>Or it can be started from day, like 06-12-2016</td>
+        </tr>
+    </table>
+    <table id="howto">
+        <tr>
+            <th style="text-decoration: underline;">Supported Date formats</th>
+        </tr>
+        <tr>
+            <td>17.30</td>
+        </tr>
+        <tr>
+            <td>17:30</td>
+        </tr>
+        <tr>
+            <td>5.30pm</td>
+        </tr>
+    </table>
+    </div>
+    <h4><span style="font-size:15px"><strong>Note:</strong></span> Also it supports words instead of dates, like <em>Today</em>, <em>Tomorrow, Week, Year</em>. Currently the step is 1 only, so even if you specify &quot;<em>In 2 weeks</em>&quot; in your subject, reminder will be scheduled for 1 week.</h4>
+</div>

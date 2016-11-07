@@ -29,6 +29,15 @@ body {
 
 h1, h2, h3 {
     font-family: 'Lucida Handwriting';
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: brightness(150%) drop-shadow(5px 5px 5px #222);
+}
+
+#howto {
+    border: solid; 
+    float:left; 
+    margin-right: 20px;
+    background-color: #4C9434;
 }
 
 .pad {
@@ -136,7 +145,7 @@ a:hover {
     font-family: "Lucida Console";
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
-    bottom: 10px;
+    bottom: 2px;
     right: 2px;
     margin: 0 auto;
     padding: 2px;
@@ -155,7 +164,7 @@ a:hover {
 }
 
 #panel a {
-    -webkit-filter: drop-shadow(5px 5px 5px #8D2);
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: brightness(150%) drop-shadow(5px 5px 5px #222);
     transform: scale(.8);
 }
