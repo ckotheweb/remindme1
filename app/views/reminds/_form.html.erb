@@ -1,0 +1,38 @@
+<%= form_for(remind) do |f| %>
+  <% if remind.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(remind.errors.count, "error") %> prohibited this reminder from being saved:</h2>
+
+      <ul>
+      <% remind.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :email_id, :hidden => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, :size => "70" %>
+  </div><br>
+
+  <div class="field main" style="font-weight: 800">
+    <%= f.label :body %>
+    <%= f.text_area :body, :class => 'ckeditor' %>
+  </div>
+
+  <div class="field">
+   <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
+    <%= f.label :schedule %> <br>
+    <%= f.datetime_select :schedule, :start_year => Date.today.year %>
+  <% end %>
+  </div>
+<br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

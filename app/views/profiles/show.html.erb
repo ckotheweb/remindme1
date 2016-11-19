@@ -1,0 +1,38 @@
+<div class="pad">
+  <p id="notice"><%= notice %></p>
+  
+  <% if current_user.profile == @profile or current_user.admin? %>
+    <p>
+      <strong>Name:</strong>
+      <%= @profile.name %>
+    </p>
+    
+    <p>
+      <strong>Lastname:</strong>
+      <%= @profile.lastname %>
+    </p>
+    
+    <p>
+      <strong>Age:</strong>
+      <%= @profile.age %>
+    </p>
+    
+    <p>
+      <strong>User ID:</strong>
+      <%= @profile.user_id %>
+    </p>
+    
+    <p>
+      <strong>Location:</strong>
+      <%= @profile.timezone %>
+    </p>
+  <% else %>
+    <h2>You are not authorized to view this profile.</h2>
+  <% end %>
+</div>
+<div class="optlink">
+  <%= link_to 'Edit profile', edit_profile_path(@profile) %>
+  <% if current_user.admin? %>
+    | <%= link_to 'List profiles', profiles_path %>
+  <% end %>
+</div>

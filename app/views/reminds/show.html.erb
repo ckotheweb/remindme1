@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="pad">
+  <% if current_user.email == Email.find_by_id(@remind.email_id).email %>
+    <p>
+      <strong>Scheduled for:</strong>
+      <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
+        <%= @remind.schedule.strftime("%Y-%m-%d %H:%M %Z") %>
+      <% end %>
+    </p>
+    
+    <p>
+      <strong>Title:</strong>
+      <div class="mailmeta">
+        <%= @remind.title %>
+      </div>
+    </p>
+    
+    <p>
+      <strong>Body:</strong>
+      <div class='mail'>
+      <%= @remind.body.html_safe %>
+      </div>
+    </p>
+  <% else %>
+    <h2>You are not authorized to view this reminder.</h2>
+  <% end %>
+</div>
+<div class="optlink">
+  <%= link_to 'Back', :back %> | 
+  <%= link_to 'Edit', edit_remind_path(@remind) %>
+</div>

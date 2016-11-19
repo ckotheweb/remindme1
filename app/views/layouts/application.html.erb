@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RemindMail</title>
+  <%= render 'application/favicon' %> <!-- Favicon to be displayed on website tab -->
+    <% if user_signed_in? %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <% else %>
+        <%= stylesheet_link_tag    'not_loggedin/napplication', media: 'all', 'data-turbolinks-track' => true %>
+    <% end %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="container">
+    <div id="logo">
+        <%= image_tag("mail_forward.png", :alt => "logomail", width: 42, height: "auto") %>
+        <%= link_to image_tag("logo4.png", :alt => "logo", width: 300, height: "auto", title: "Home"), root_path %>
+    </div>
+<nav id="panel">
+    <div id="panel_left">
+      <!--Top Left-hand side menu -->
+          <%= link_to image_tag("icons/home.png", :alt => "home", width: "80%", height: "auto", title: "Home"), root_path %>
+          <%= link_to image_tag("icons/contactus.png", :alt => "contactus", width: "80%", height: "auto", title: "Contact us!"), contacts_path %>
+    </div>
+    <div id="panel_right"> 
+        <!-- Profile validation and links appearance logic -->
+        <% if user_signed_in? %> <!-- To make a decision of what options to provide when user loged-in or not-->
+            <%= link_to image_tag("icons/logout.png", :alt => "logout", width: "80%", height: "auto", title: "Logout"), destroy_user_session_path, method: :delete %> <!--Destroy session -->
+            <%if Profile.find_by_user_id(current_user.id) != nil %> <!-- Logic which displays Reservations and Profile options only in case user has a profile -->
+                <%= link_to image_tag("icons/profile.png", :alt => "profile", width: "80%", height: "auto",title: "Profile"), profile_path(Profile.find_by_user_id(current_user.id)) %>
+                <%= link_to image_tag("icons/new.png", :alt => "newrem", width: "80%", height: "auto", title: "Create New Reminder"), new_remind_path %>
+                <%= link_to image_tag("icons/reminders.png", :alt => "reminders", width: "80%", height: "auto", title: "Show all reminders"), reminds_path %>
+            <% else %> <!-- If profile is not created, provide only options to create a profile -->
+                <%= link_to image_tag("icons/profile.png", :alt => "profileblank", width: "80%", height: "auto", title: "Create new profile"), new_profile_path %>
+            <% end %>
+            
+            <% if current_user.admin? %> <!-- Provides additional functionality if user is Admin -->
+                <%= link_to image_tag("icons/users.png", :alt => "users", width: "80%", height: "auto", title: "Users admin"), users_path %>
+                <%= link_to image_tag("icons/remadmin.png", :alt => "allreminders", width: "80%", height: "auto", title: "Reminders Admin"), listallreminders_path %>
+            <% end %>
+                
+        <%else%> <!-- If user not signed-in below options will be displayed -->
+                <%= link_to image_tag("icons/login.png", :alt => "login", width: "80%", height: "auto", title: "Login"), new_user_session_path %>
+                <%= link_to image_tag("icons/register.png", :alt => "register", width: "80%", height: "auto", title: "Register here"), new_user_registration_path %>
+        <%end%>
+    </div>
+</nav>
+<% if user_signed_in? %> <!-- To make a decision of what options to provide when user loged-in or not-->
+    <div id="name">
+        <%= link_to current_user.email, user_path(current_user) %> <!-- Displays user's email address on the right top corner of the screen and links to its show/edit page --> 
+    </div>
+<% end %>
+<p class="alert"><%= alert %></p>
+
+<div id="main">
+    <%= yield %>
+</div>
+
+<div id="signature">Final NCIRL Project '16. A. Kuriackovskij</div> <!-- Signature which proves the project was made by me - Aleksandr Kuriackovskij ;) -->
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'bundler/setup'
+require 'daemons'
+
+#Logging of events and exceptions
+@options = {
+    :backtrace  => true, #Write a backtrace of the last exceptions to the file ’[app_name].log’ in the pid-file directory if the application exits due to an uncaught exception
+    :log_output => true #When given (i.e. set to true), redirect both STDOUT and STDERR to a logfile named ’[app_name].output’ in the pid-file directory
+}
+
+#starts mailman_server as daemon.
+Daemons.run('scripts/mailman_server.rb', @options)

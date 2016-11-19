@@ -1,0 +1,27 @@
+<div class="pad">
+    <h2>Users list(<span style="color:red; font-family:Arial;">admin</span>)</h2> <!-- View all user accounts page. Only for Admins. -->
+    
+    <table>
+        <thead>
+            <tr style="text-decoration: underline;">
+              <th>ID</th>
+              <th>E-mail</th>
+              <th>Admin</th>
+              <th>Signed in on</th>
+              <th>From IP</th>
+              <th colspan="3"></th>
+            </tr>
+        </thead>
+        <% @users.each do |user| %>
+            <tr> 
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td><%= user.admin %></td>
+            <td><%= user.last_sign_in_at %></td>
+            <td><%= user.last_sign_in_ip %></td>
+            <td><%= link_to "Reset password", user %></td>
+            </tr>
+        <% end %>
+    </table>
+    <br/>
+</div>

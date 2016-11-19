@@ -1,0 +1,39 @@
+<%= form_for(profile) do |f| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="profile" style="text-align:left;">
+    <%= f.label :name %>
+    <span style="padding-left:49px;"><%= f.text_field :name %></span>
+  </div>
+
+  <div class="profile" style="text-align:left;">
+    <%= f.label :lastname %>
+    <span style="padding-left:20px;"><%= f.text_field :lastname %></span>
+  </div>
+
+  <div class="profile" style="text-align:left;">
+    <%= f.label :age %>
+    <span style="padding-left:63px;"><%= f.number_field :age, min: 0, max: 99, :size => "5" %></span>
+  </div>
+  
+  <div class="profile" style="text-align:left;">
+    <%= f.label :location %>
+    <span style="padding-left:29px;"><%= f.time_zone_select :timezone, nil, default: Time.zone.name %></span>
+  </div>
+  
+    <%= f.text_field :user_id, value: User.find_by_id(@profile.user_id).id, :hidden => true  %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
