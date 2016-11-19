@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+# Scheduler service/daemon
+# Version: 0.1
+# Date 2016/10
+# @author Aleksandr Kuriackovskij, x15029476
 require 'rubygems'
 require 'bundler/setup'
 require 'daemons'

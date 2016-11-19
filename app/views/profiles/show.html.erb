@@ -1,7 +1,7 @@
 <div class="pad">
   <p id="notice"><%= notice %></p>
   
-  <% if current_user.profile == @profile or current_user.admin? %>
+  <% if current_user.profile == @profile or current_user.admin? %> <!--Only profile owner or admin are allowed to view profile -->
     <p>
       <strong>Name:</strong>
       <%= @profile.name %>

@@ -1,9 +1,14 @@
+# Class name: ProfilesController
+# Version: 0.2
+# Date 2016/11
+# @author Aleksandr Kuriackovskij, x15029476
+
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
   before_filter :isadmin, :only => [:destroy, :index]
   
-  #Method which verifies if current user admin and allows to destroy profiles
+  #Method which verifies if current user is admin and allows to destroy profiles
   def isadmin
     unless current_user && current_user.admin?
       render :forbidden

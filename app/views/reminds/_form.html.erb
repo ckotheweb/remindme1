@@ -20,13 +20,13 @@
     <%= f.text_field :title, :size => "70" %>
   </div><br>
 
-  <div class="field main" style="font-weight: 800">
+  <div class="field main" style="font-weight: 800;">
     <%= f.label :body %>
-    <%= f.text_area :body, :class => 'ckeditor' %>
+    <%= f.text_area :body, :class => 'ckeditor' %> <!-- Using ckeditor for creation and editing reminders. Supports HTML and many fonts manipulation features. -->
   </div>
 
   <div class="field">
-   <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %>
+   <% Time.use_zone(Profile.find_by_user_id(current_user.id).timezone) do %> <!-- Below code will be affected by user's time zone. It's like a time zone emulation. -->
     <%= f.label :schedule %> <br>
     <%= f.datetime_select :schedule, :start_year => Date.today.year %>
   <% end %>

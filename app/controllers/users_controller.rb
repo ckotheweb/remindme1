@@ -1,6 +1,7 @@
-########################################################################################
-#==                                 Users controller                                ==#
-########################################################################################
+# Class name: UsersController
+# Version: 0.3
+# Date 2016/10
+# @author Aleksandr Kuriackovskij, x15029476
 
 class UsersController < ApplicationController
     

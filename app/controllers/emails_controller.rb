@@ -1,3 +1,7 @@
+# Class name: EmailsController
+# Version: 0.3
+# Date 2016/10
+# @author Aleksandr Kuriackovskij, x15029476
 class EmailsController < ApplicationController
 
 before_action :set_email, only: [:update, :destroy]
@@ -34,15 +38,6 @@ before_filter :dont_allow, :only => [:index, :show, :new, :edit]
   def create
     @email = Email.new(email_params)
 
-  #  respond_to do |format|
-  #    if @email.save
-  #      format.html { redirect_to @email, notice: 'Email was successfully created.' }
-  #      format.json { render :show, status: :created, location: @email }
-  #    else
-  #      format.html { render :new }
-  #      format.json { render json: @email.errors, status: :unprocessable_entity }
-  #    end
-  #  end
   end
 
   # PATCH/PUT /emails/1

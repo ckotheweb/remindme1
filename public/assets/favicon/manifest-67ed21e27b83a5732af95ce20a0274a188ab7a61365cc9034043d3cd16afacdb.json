@@ -1,0 +1,17 @@
+{
+	"name": "favicon",
+	"icons": [
+		{
+			"src": "/assets/favicon/android-chrome-192x192-7f0c0c237dd2e7dcd793255f412fa7301a3741bb9515f21daf525a927f6b5502.png",
+			"sizes": "192x192",
+			"type": "image\/png"
+		},
+		{
+			"src": "/assets/favicon/android-chrome-256x256-ed982f9c736e1bac6343ca2843984338bafc8b1a3e2068623bd379b686cbc8fa.png",
+			"sizes": "256x256",
+			"type": "image\/png"
+		}
+	],
+	"theme_color": "#ffffff",
+	"display": "standalone"
+}

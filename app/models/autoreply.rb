@@ -1,6 +1,12 @@
+# Class name: Autoreply
+# Version: 1.1
+# Date 2016/10
+# @author Aleksandr Kuriackovskij, x15029476
+
 require 'mail'
+#Inheriting from Remind class
 class Autoreply < Remind
-    
+#Mail settings    
 options = { :address              => "smtp.gmail.com",
             :port                 => 587,
             :user_name            => ENV['USER_NAME'],
@@ -112,7 +118,7 @@ end
   ### Method which sends e-mail reminder to user ###
   ##################################################
   def self.send_reminder(remind)
-    if Email.exists? id: remind.email_id                          #Checking if email exists in database. If not, delete that reminder.
+    if Email.exists? id: remind.email_id   #Checking if email exists in database. If not, delete that reminder.
       recipient = Email.find_by_id(remind.email_id).email
       title = remind.title
       Mail.deliver do
@@ -124,10 +130,12 @@ end
           body remind.body
         end
       end
+	  #Set this reminder as sent, so it won't be sent anymore.
       remind.sent = true
       remind.save(:validate => false)
     else
-      bad_reminder = Remind.find_by_email_id(remind.email_id).id  #Delete reminder with missing email
+	  #Deleting reminder if email doesn't exist anymore in database
+      bad_reminder = Remind.find_by_email_id(remind.email_id).id  
       Remind.destroy(bad_reminder)
     end
   end

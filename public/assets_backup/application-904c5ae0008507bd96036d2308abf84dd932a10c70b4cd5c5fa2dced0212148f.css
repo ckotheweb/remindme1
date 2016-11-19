@@ -1,0 +1,1065 @@
+/* 
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/*
+body {
+    background: asset_url("green.jpg") no-repeat center center fixed;
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
+    background-size:cover;
+    color: #FFFAFA;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    max-width: 100%;
+    max-height: auto;
+}
+*/
+/* line 35, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+h1, h2, h3 {
+  font-family: 'Lucida Handwriting';
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: brightness(150%) drop-shadow(5px 5px 5px #222);
+}
+
+/* line 41, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#howto {
+  border: solid;
+  float: left;
+  margin-right: 20px;
+  background-color: #4C9434;
+}
+
+/* line 48, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+.pad {
+  /*background: linear-gradient(to bottom, rgba(57, 172, 53, 0.78) 87%, #EBD950 13%); */
+  background-color: rgba(49, 148, 46, 0.7);
+  font: 11pt 'Verdana', Arial, Helvetica, Sans-Serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
+  padding: 10px;
+  text-shadow: .3px .4px #CCCCCC;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* line 65, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+.optlink {
+  background-color: rgba(246, 197, 19, 0.9);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px 0px 6px 6px;
+  border-radius: 0px 0px 6px 6px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* line 78, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+blockquote {
+  background-color: #4C9434;
+  display: inline-block;
+  margin: 0 0 0 25px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 87, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+.mail {
+  background-color: white;
+  /*background-color: rgba(243, 254, 230, 0.92);*/
+  display: block;
+  color: black;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 10px 0 10px;
+  padding: 1px;
+}
+
+/* line 99, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+.mailmeta {
+  background-color: white;
+  /*background-color: rgba(153, 223, 119, 0.91);*/
+  display: inline-block;
+  color: black;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 3px 5px 3px 5px;
+}
+
+/* line 110, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+a {
+  color: #C70A0A;
+  padding: 3px;
+  outline: none;
+}
+
+/* line 116, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+a:hover {
+  color: black;
+  background-color: rgba(225, 237, 59, 0.55);
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+/* line 125, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#main {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 130, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#container {
+  width: 97%;
+  /*97%; */
+  margin: 0px auto;
+}
+
+/* line 135, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#logo {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #410);
+  text-align: right;
+}
+
+/* line 141, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#logo a:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #030);
+  filter: drop-shadow(1px 1px 1px #030);
+  background-color: transparent;
+}
+
+/* line 147, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#signature {
+  position: fixed;
+  color: red;
+  font-family: "Lucida Console";
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  bottom: 2px;
+  right: 2px;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+/* line 159, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel {
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  font-size: 15px;
+  background-color: rgba(57, 172, 53, 0.78);
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+/* line 171, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel a {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: brightness(150%) drop-shadow(5px 5px 5px #222);
+  transform: scale(0.8);
+}
+
+/* line 177, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel a:hover {
+  -webkit-filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+  filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+  transform: scale(1.15);
+  background-color: transparent;
+}
+
+/* line 184, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel a:active {
+  -webkit-filter: saturate(8) drop-shadow(2px 10px 5px #A20);
+  filter: saturate(8) drop-shadow(2px 10px 5px #A20);
+  transform: scale(0.6);
+}
+
+/* line 190, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel_left a, #panel_right a {
+  /*mean links styling*/
+  line-height: 45px;
+  /* middle of nav bar*/
+  color: white;
+  padding: 0 5px 0 5px;
+  /*top/right/bottom/left -->*/
+}
+
+/* line 196, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel_left a {
+  margin: 0 0 0 .5%;
+  padding: 7px 0 0 15px;
+  float: left;
+}
+
+/* line 202, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#panel_right a {
+  margin: 0 .5% 0 0;
+  padding: 7px 0 0 0;
+  float: right;
+}
+
+/* line 208, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#name a {
+  float: right;
+  right: 11px;
+  position: absolute;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: rgba(57, 172, 53, 0.78);
+  color: white;
+  font-weight: 900;
+  padding: 8px;
+}
+
+/* line 221, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+.contactform {
+  font: 12pt 'Gotham', Arial, Helvetica, Sans-Serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 3px;
+  resize: none;
+  margin: 0 auto;
+  padding: 2px;
+  width: 90%;
+}
+
+/* line 235, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+#error_explanation {
+  color: #C7694A;
+  font: 12pt 'Gotham', Arial, Helvetica, Sans-Serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 2px;
+  width: 90%;
+}
+
+/* line 249, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+@media screen and (max-width: 540px) {
+  /* line 255, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+  #logo {
+    text-align: center;
+  }
+
+  /* line 258, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+  #container {
+    width: 90%;
+  }
+
+  /* line 262, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+  #panel {
+    padding-bottom: 23px;
+    margin: 10px auto;
+  }
+
+  /* line 266, /var/www/remindmail/remindme1/app/assets/stylesheets/not_loggedin/napplication.css.scss */
+  #panel_left a, #panel_right a {
+    /*mean links styling*/
+    line-height: 0px;
+    /* middle of nav bar*/
+    color: white;
+    padding: 0 0 0 0;
+    /*top/right/bottom/left -->*/
+  }
+}
+/*    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 89px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:434px) {
+    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 120px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:359px) {
+    #container {
+        width: 359px;
+    }
+    #logo {
+    text-align: center;
+    }
+}
+
+
+*/
+/*a:hover {
+    -webkit-filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+    filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+    transform: scale(1.25);
+}
+*/
+/*
+
+.main {
+    background-color: rgba(57, 172, 53, 0.78);
+    font: 12pt 'Lucida Handwriting', Arial, Helvetica, Sans-Serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: table;
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 70%;
+}
+
+.textareaaa
+    {
+        border: 1px solid #EEEEEE;
+        box-shadow: 1px 1px 0 #DDDDDD;
+        display: block;
+        font-family: 'Marck Script',cursive;
+        font-size: 22px;
+        line-height: 50px;
+        margin: 2% auto;
+        padding: 11px 20px 0 70px;
+        resize: none;
+        height: 689px;
+        width: 530px;
+
+        background-image: -moz-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0px), -moz-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -moz-radial-gradient(3.9% 46% , circle closest-corner, #CCCCCC, #CCCCCC 43.5%, transparent 0%); 
+        background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
+
+        -webkit-background-size:  100% 50px;
+        background-size: 100% 50px;
+    }
+
+textarea { 
+    resize: none;
+}
+
+.ro input {
+    background-color: #BBBEBF;
+}
+
+
+
+
+#sleft {
+    left: 10px;
+}
+
+th {
+    font-weight: bold;
+    color: #D5F5F5;
+    font-size: large ;
+    font-family: serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+ 
+   font-weight: bold;
+    text-align: justify;
+    color: #cc0000;
+}
+tr:nth-child(odd){
+  
+    font-weight: bold;
+    text-align: justify;
+    color: white;
+}
+*/
+/*body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+*/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* line 18, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 23, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+bg_full {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  left: 0;
+  min-height: auto;
+  min-width: 100%;
+  top: 0;
+}
+
+/* line 36, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+body {
+  background: url(/assets/green-2709f2695f7ca13445ce02b502bc330197df9b2205374a7f838eb1e22ab870fb.jpg) no-repeat center center fixed;
+  background-color: orange;
+  color: #FFFAFA;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  max-width: 100%;
+  max-height: auto;
+}
+
+/* line 47, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+h1, h2, h3 {
+  font-family: 'Lucida Handwriting';
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: brightness(150%) drop-shadow(5px 5px 5px #222);
+}
+
+/* line 53, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#howto {
+  border: solid;
+  float: left;
+  margin-right: 20px;
+  background-color: #4C9434;
+}
+
+/* line 60, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+.pad {
+  /*background: linear-gradient(to bottom, rgba(57, 172, 53, 0.78) 87%, #EBD950 13%); */
+  background-color: rgba(49, 148, 46, 0.7);
+  font: 11pt 'Verdana', Arial, Helvetica, Sans-Serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
+  padding: 10px;
+  text-shadow: .3px .4px #CCCCCC;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* line 77, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+.optlink {
+  background-color: rgba(246, 197, 19, 0.9);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px 0px 6px 6px;
+  border-radius: 0px 0px 6px 6px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* line 90, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+blockquote {
+  background-color: #4C9434;
+  display: inline-block;
+  margin: 0 0 0 25px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 99, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+.mail {
+  background-color: white;
+  /*background-color: rgba(243, 254, 230, 0.92);*/
+  display: block;
+  color: black;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 10px 0 10px;
+  padding: 1px;
+}
+
+/* line 111, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+.mailmeta {
+  background-color: white;
+  /*background-color: rgba(153, 223, 119, 0.91);*/
+  display: inline-block;
+  color: black;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 3px 5px 3px 5px;
+}
+
+/* line 122, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+a {
+  color: #C70A0A;
+  padding: 3px;
+  outline: none;
+}
+
+/* line 128, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+a:hover {
+  color: black;
+  background-color: rgba(225, 237, 59, 0.55);
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+/* line 137, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#main {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 142, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#container {
+  width: 97%;
+  /*97%; */
+  margin: 0px auto;
+}
+
+/* line 147, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#logo {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  text-align: right;
+}
+
+/* line 153, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#logo a:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #030);
+  filter: drop-shadow(1px 1px 1px #030);
+  background-color: transparent;
+}
+
+/* line 159, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#signature {
+  position: fixed;
+  color: red;
+  font-family: "Lucida Console";
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  bottom: 2px;
+  right: 2px;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+/* line 171, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel {
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  font-size: 15px;
+  background-color: rgba(57, 172, 53, 0.78);
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+/* line 183, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel a {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: brightness(150%) drop-shadow(5px 5px 5px #222);
+  transform: scale(0.8);
+}
+
+/* line 189, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel a:hover {
+  -webkit-filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+  filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+  transform: scale(1.15);
+  background-color: transparent;
+}
+
+/* line 196, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel a:active {
+  -webkit-filter: saturate(8) drop-shadow(2px 10px 5px #A20);
+  filter: saturate(8) drop-shadow(2px 10px 5px #A20);
+  transform: scale(0.6);
+}
+
+/* line 202, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel_left a, #panel_right a {
+  /*mean links styling*/
+  line-height: 45px;
+  /* middle of nav bar*/
+  color: white;
+  padding: 0 5px 0 5px;
+  /*top/right/bottom/left -->*/
+}
+
+/* line 208, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel_left a {
+  margin: 0 0 0 .5%;
+  padding: 7px 0 0 15px;
+  float: left;
+}
+
+/* line 214, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#panel_right a {
+  margin: 0 .5% 0 0;
+  padding: 7px 0 0 0;
+  float: right;
+}
+
+/* line 220, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#name a {
+  float: right;
+  right: 13px;
+  position: absolute;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: rgba(57, 172, 53, 0.78);
+  color: white;
+  font-weight: 900;
+  padding: 8px;
+}
+
+/* line 233, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#titlelink a {
+  color: white;
+  font-weight: 500;
+}
+
+/* line 237, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+.contactform {
+  font: 12pt 'Gotham', Arial, Helvetica, Sans-Serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 3px;
+  resize: none;
+  margin: 0 auto;
+  padding: 2px;
+  width: 90%;
+}
+
+/* line 251, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+#error_explanation {
+  color: #C7694A;
+  font: 12pt 'Gotham', Arial, Helvetica, Sans-Serif;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 2px;
+  width: 90%;
+}
+
+/* line 265, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+div .profile {
+  margin-bottom: 10px;
+}
+
+/* line 269, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+/* line 274, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+tr:nth-child(even) {
+  text-align: justify;
+  background-color: rgba(151, 175, 158, 0.42);
+}
+
+/* line 278, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+tr:nth-child(odd) {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1360px) {
+  /* line 283, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #container {
+    width: 92%;
+  }
+
+  /* line 286, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel {
+    padding-bottom: 25px;
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  /* line 291, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #main {
+    margin-top: 30px;
+  }
+
+  /* line 294, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel_left {
+    float: left;
+    padding-left: 8px;
+  }
+
+  /* line 298, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel_left a, #panel_right a {
+    /*mean links styling */
+    line-height: 0px;
+    /* middle of nav bar */
+    color: white;
+    padding: 0 0 0 0;
+    /*top/right/bottom/left --> */
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 887px) {
+  /* line 307, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #logo {
+    text-align: center;
+  }
+
+  /* line 310, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #container {
+    width: 90%;
+  }
+
+  /* line 314, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #name {
+    float: right;
+    position: relative;
+  }
+
+  /* line 319, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel {
+    padding-bottom: 23px;
+    margin: 10px auto;
+  }
+
+  /* line 323, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel_left a, #panel_right a {
+    /*mean links styling*/
+    line-height: 0px;
+    /* middle of nav bar*/
+    color: white;
+    padding: 0 0 0 0;
+    /*top/right/bottom/left -->*/
+    margin: 0 auto;
+  }
+
+  /* line 329, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel_left a {
+    clear: left;
+  }
+
+  /* line 332, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel_right a {
+    float: right;
+  }
+}
+@media screen and (max-width: 835px) {
+  /* line 339, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #logo {
+    text-align: center;
+  }
+
+  /* line 342, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #container {
+    width: 835px;
+  }
+
+  /* line 345, /var/www/remindmail/remindme1/app/assets/stylesheets/application.css.scss */
+  #panel {
+    width: 90%;
+  }
+}
+/*
+@media screen and (max-width:582px) {
+    #container {
+        width: 582px;
+    }
+    #panel {
+        width: 90%;
+    }
+}
+/*    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 89px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:434px) {
+    #logo {
+    text-align: center;
+    }
+    #container {
+        width: 90%;
+    }
+    #panel {
+        padding-bottom: 120px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:359px) {
+    #container {
+        width: 359px;
+    }
+    #logo {
+    text-align: center;
+    }
+}
+
+
+*/
+/*a:hover {
+    -webkit-filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+    filter: saturate(8) drop-shadow(5px 5px 5px #8D2);
+    transform: scale(1.25);
+}
+*/
+/*
+
+.main {
+    background-color: rgba(57, 172, 53, 0.78);
+    font: 12pt 'Lucida Handwriting', Arial, Helvetica, Sans-Serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: table;
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 70%;
+}
+
+.textareaaa
+    {
+        border: 1px solid #EEEEEE;
+        box-shadow: 1px 1px 0 #DDDDDD;
+        display: block;
+        font-family: 'Marck Script',cursive;
+        font-size: 22px;
+        line-height: 50px;
+        margin: 2% auto;
+        padding: 11px 20px 0 70px;
+        resize: none;
+        height: 689px;
+        width: 530px;
+
+        background-image: -moz-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0px), -moz-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -moz-radial-gradient(3.9% 46% , circle closest-corner, #CCCCCC, #CCCCCC 43.5%, transparent 0%); 
+        background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
+
+        -webkit-background-size:  100% 50px;
+        background-size: 100% 50px;
+    }
+
+textarea { 
+    resize: none;
+}
+
+.ro input {
+    background-color: #BBBEBF;
+}
+
+
+
+
+#sleft {
+    left: 10px;
+}
+
+th {
+    font-weight: bold;
+    color: #D5F5F5;
+    font-size: large ;
+    font-family: serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+ 
+   font-weight: bold;
+    text-align: justify;
+    color: #cc0000;
+}
+tr:nth-child(odd){
+  
+    font-weight: bold;
+    text-align: justify;
+    color: white;
+}
+*/

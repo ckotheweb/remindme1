@@ -1,21 +1,32 @@
 source 'https://rubygems.org'
 
+#For users authentication
 gem 'devise'
 
+#Gem which is utilized for emails sending
 gem 'mail'
 
+#Environmental variables implementation. Required in order to hide usernames/passwords.
 gem 'figaro'
 
+#Mailman gem for receiving emails.
 gem 'mailman', require: false
 
+#Text/HTML editor. For reminders creation/editing.
 gem 'ckeditor_rails'
 
+#Scheduler gem for periodic scheduled jobs.
 gem 'rufus-scheduler'
 
+#For processes daemonization. Is used to daemonize rufus-scheduler and mailman.
 gem 'daemons'
 
+#Below gems are required for Contact us form.
 gem 'mail_form'
 gem 'simple_form'
+
+#Gem to adapt application to use PostgreSQL DBMS
+gem 'pg'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'

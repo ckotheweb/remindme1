@@ -1,3 +1,8 @@
+# Class name: RemindsController
+# Version: 1.1
+# Date 2016/11
+# @author Aleksandr Kuriackovskij, x15029476
+
 class RemindsController < ApplicationController
 
   before_action :set_remind, only: [:show, :edit, :update, :destroy]
@@ -10,11 +15,13 @@ class RemindsController < ApplicationController
     @reminds = Remind.where(:email => email_id)
   end
 
+  #The same as index method, but is required for listing past reminders
   def completed
     email_id = Email.find_by_email(current_user.email).id
     @reminds = Remind.where(:email => email_id)
   end
   
+  #Setting time zone when any actions in this controller occurs 
   def set_timezone
     tz = Profile.find_by_user_id(current_user.id).timezone
     @timezone = Time.now.in_time_zone(tz).strftime('%z')
@@ -43,6 +50,7 @@ class RemindsController < ApplicationController
   def create
       @remind = Remind.new(remind_params)
       if user_signed_in?
+	    #Set time zone for new reminder only if user is logged in. There is another method in Remind class for logging from e-mails.
         user_time = @remind.schedule.to_datetime
         @remind.schedule = user_time.change(:offset => @timezone)
       end
