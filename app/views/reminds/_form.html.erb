@@ -33,6 +33,6 @@
   </div>
 <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit( f.object.new_record? ? "Create Reminder" : "Update Reminder") %>
   </div>
 <% end %>
